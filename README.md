@@ -6,7 +6,7 @@ tree & context
 description 
 objectives / problematic 
 
---- 
+<!-- --- -->
 
 ## Installation et prérequis
 
@@ -16,12 +16,12 @@ objectives / problematic
 ### Lancement de l'application
 ### Déploiement sur Clever Cloud
 
----
+<!-- --- -->
 
 ## QuickStart 
 instruction on how to start the app/api 
 
---- 
+<!-- --- -->
 
 ## Dataset utilisé 
 JO, xplain context, tables, nbr of rows, etc if time, lil analysis
@@ -31,7 +31,7 @@ justify why the use of that specific data, what we wanna do w/ it
 ### Schémas des entités principales (Athlètes, Événements, Médailles)
 relation btw entities if necessary / scheme ? 
 
---- 
+<!-- --- -->
 
 ## API 
 JSON, methods, details
@@ -63,7 +63,7 @@ GET /search?q=... - Recherche across toutes les données
 #### Configuration des CORS
 #### Gestion des erreurs
 
---- 
+<!-- --- -->
 
 ## Tests
 ### Structure des tests
@@ -71,7 +71,7 @@ GET /search?q=... - Recherche across toutes les données
 ### Couverture de code
 
 
---- 
+<!-- --- -->
 
 ## Déploiement
 ### Configuration Clever Cloud
@@ -79,7 +79,7 @@ GET /search?q=... - Recherche across toutes les données
 ### Pipeline de déploiement continu
 ### Monitoring et logs
 
---- 
+<!-- --- -->
 ## Exemples d'Utilisation
 link btw our context and the material produced 
 ### Requêtes API examples (avec curl et examples JSON)
@@ -87,8 +87,7 @@ link btw our context and the material produced
 ### Cas d'utilisation courants
 
 
-
----
+<!-- 
 description: "NEST JS API deployment project based on Paris 2024 Olympics dataset @ Mines St-Étienne"
 author: "Alice Francé, Chloé Larroze"
----
+ -->
