@@ -6,6 +6,11 @@ tree & context
 description 
 objectives / problematic 
 
+<div align="center">
+    <img src="./.pics/JO_eiffel.jpg" alt="Beach-volley Paris 2024" width="400px"/>
+    <p><em>Figure 1 : Beach-volley Paris 2024</em></p>
+</div>
+
 <!-- --- -->
 
 ## Installation et prérequis
