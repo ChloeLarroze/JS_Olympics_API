@@ -1,8 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
-import { AthleteModule } from '../src/athlete.module';
-import { Athlete } from '../src/Athlete';
+import { AthleteModule } from '../src/Athlete/athlete.module';
+import { Athlete } from '../src/Athlete/Athlete';
 
 describe('AthleteController (e2e)', () => {
     let app: INestApplication;
