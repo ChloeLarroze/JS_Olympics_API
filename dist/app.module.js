@@ -9,12 +9,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
 const events_module_1 = require("./Events/events.module");
+const medailles_module_1 = require("./Medailles/medailles.module");
+const athlete_module_1 = require("./Athlete/athlete.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
 exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [events_module_1.EventsModule],
+        imports: [events_module_1.EventsModule, medailles_module_1.MedaillesModule, athlete_module_1.AthleteModule],
     })
 ], AppModule);
 //# sourceMappingURL=app.module.js.map
