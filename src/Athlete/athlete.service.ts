@@ -41,7 +41,7 @@ export class AthleteService implements OnModuleInit {
             .sort((a, b) => a.country.name.localeCompare(b.country.name));
     }
 
-    removecode(code: number) {
+    removeByCode(code: number) {
         this.storage.delete(code);
     }
 

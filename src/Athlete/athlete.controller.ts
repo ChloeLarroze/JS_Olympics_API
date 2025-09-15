@@ -8,43 +8,41 @@ import {
     Post,
     Query,
 } from '@nestjs/common';
-import type { Athlete } from "./Athlete";
-import {AthleteService} from "./athlete.service";
+import type { Athlete, Country } from './Athlete';
+import { AthleteService } from './athlete.service';
 
-@Controller('/Athlete')
+@Controller('/athletes')
 export class AthleteController {
     constructor(private readonly athleteService: AthleteService) {}
 
-    /*
+    @Post()
+    createAthlete(@Body() athlete: Athlete): Athlete {
+        this.athleteService.addAthlete(athlete);
+        return this.athleteService.getAthleteByCode(athlete.code);
+    }
 
-   @Post()
-   createAthlete(@Body() athlete: Athlete): {
-       this.athleteService.addAthlete(athlete);
-       return this.athleteService.addAthlete(athlete.code);
-   }
+    @Get()
+    getAthletes(@Query('countryCode') countryCode?: string): Athlete[] {
+        if (countryCode) {
+            const country: Country = { code: countryCode, name: '' }; // ⚠️ à remplacer si tu veux gérer le `name`
+            return this.athleteService.getAthletesByCountry(country);
+        }
+        return this.athleteService.getAllAthletes();
+    }
 
-   @Get()
-   getBooks(@Query('name') name: string): Athlete[] {
-       if (author) {
-           return this.bookService.getBooksOf(author);
-       }
-       return this.bookService.getAllBooks();
-   }
+    @Get(':code')
+    getAthlete(@Param('code') code: string): Athlete {
+        return this.athleteService.getAthleteByCode(Number(code));
+    }
 
-   @Get(':isbn')
-   getBook(@Param('isbn') isbn: string): Book {
-       return this.bookService.getBook(isbn);
-   }
+    @Delete(':code')
+    deleteAthlete(@Param('code') code: string): void {
+        this.athleteService.removeByCode(Number(code));
+    }
 
-   @Delete(':isbn')
-   deleteBook(@Param('isbn') isbn: string): void {
-       this.bookService.remove(isbn);
-   }
-
-   @Post('search')
-   @HttpCode(200)
-   searchBooks(@Body() { term }: { term: string }): Book[] {
-       return this.bookService.search(term);
-   }
-   */
+    @Post('search')
+    @HttpCode(200)
+    searchAthletes(@Body() { term }: { term: string }): Athlete[] {
+        return this.athleteService.search(term);
+    }
 }
