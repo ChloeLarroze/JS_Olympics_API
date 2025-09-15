@@ -1,75 +1,57 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { INestApplication } from '@nestjs/common';
-import * as request from 'supertest';
-import { AthleteModule } from '../src/Athlete/athlete.module';
+import { AthleteService} from "../src/Athlete/athlete.service";
 import { Athlete } from '../src/Athlete/Athlete';
 
-describe('AthleteController (e2e)', () => {
-    let app: INestApplication;
-
-    beforeAll(async () => {
-        const moduleFixture: TestingModule = await Test.createTestingModule({
-            imports: [AthleteModule],
-        }).compile();
-
-        app = moduleFixture.createNestApplication();
-        await app.init();
-    });
-
-    afterAll(async () => {
-        await app.close();
-    });
+describe('AthleteService (e2e)', () => {
+    let service: AthleteService;
 
     const mockAthlete: Athlete = {
         code: 1,
         name: 'Usain Bolt',
+        gender: 'male',
+        nationality: Nationality.JAM, // adapte selon ton enum
+        disciplines: ['sprint'],
+        events: ['100m', '200m'],
         country: { code: 'JAM', name: 'Jamaica' },
+        Physical_attributes: { height: 195, weights: 94 }, // vérifie la clé exacte
     };
 
-    it('POST /athletes → create athlete', async () => {
-        const response = await request(app.getHttpServer())
-            .post('/athletes')
-            .send(mockAthlete)
-            .expect(201);
+    beforeEach(async () => {
+        const module: TestingModule = await Test.createTestingModule({
+            providers: [AthleteService],
+        }).compile();
 
-        expect(response.body).toMatchObject(mockAthlete);
+        service = module.get<AthleteService>(AthleteService);
     });
 
-    it('GET /athletes → return all athletes', async () => {
-        const response = await request(app.getHttpServer())
-            .get('/athletes')
-            .expect(200);
-
-        expect(Array.isArray(response.body)).toBe(true);
-        expect(response.body.length).toBeGreaterThan(0);
+    it('Test 1 → addAthlete and getAthleteByCode', () => {
+        service.addAthlete(mockAthlete);
+        const athlete = service.getAthleteByCode(mockAthlete.code);
+        expect(athlete).toEqual(mockAthlete);
     });
 
-    it('GET /athletes/:code → return one athlete', async () => {
-        const response = await request(app.getHttpServer())
-            .get(`/athletes/${mockAthlete.code}`)
-            .expect(200);
-
-        expect(response.body).toMatchObject(mockAthlete);
+    it('Test 2 → getAllAthletes', () => {
+        service.addAthlete(mockAthlete);
+        const all = service.getAllAthletes();
+        expect(all).toContainEqual(mockAthlete);
     });
 
-    it('POST /athletes/search → search athletes by name', async () => {
-        const response = await request(app.getHttpServer())
-            .post('/athletes/search')
-            .send({ term: 'Usain' })
-            .expect(200);
-
-        expect(response.body.length).toBeGreaterThan(0);
-        expect(response.body[0].name).toContain('Usain');
+    it('Test 3 → getAthletesByCountry', () => {
+        const country: Country = { code: 'JAM', name: 'Jamaica' };
+        service.addAthlete(mockAthlete);
+        const athletes = service.getAthletesByCountry(country);
+        expect(athletes).toContainEqual(mockAthlete);
     });
 
-    it('DELETE /athletes/:code → remove athlete', async () => {
-        await request(app.getHttpServer())
-            .delete(`/athletes/${mockAthlete.code}`)
-            .expect(200);
+    it('Test 4 → search', () => {
+        service.addAthlete(mockAthlete);
+        const results = service.search('Usain');
+        expect(results).toContainEqual(mockAthlete);
+    });
 
-        // Vérifie que l'athlète n'existe plus
-        await request(app.getHttpServer())
-            .get(`/athletes/${mockAthlete.code}`)
-            .expect(500); // erreur car supprimé
+    it('Test 5 → removeByCode', () => {
+        service.addAthlete(mockAthlete);
+        service.removeByCode(mockAthlete.code);
+        expect(() => service.getAthleteByCode(mockAthlete.code)).toThrow();
     });
 });

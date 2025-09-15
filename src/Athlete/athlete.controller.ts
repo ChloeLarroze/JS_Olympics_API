@@ -7,15 +7,12 @@ export class AthleteController {
     constructor(private readonly athleteService: AthleteService) {}
 
     @Get()
-    getAthletes(: Athlete[] {
-        if (code) {
-            return this.athleteService.getAthleteByCode(code);
-        }
+    getAthletes() {
         return this.athleteService.getAllAthletes();
     }
 
     @Get(':code')
-    getAthlete(@Param('code') code: string): Athlete {
+    getAthlete(@Param('code') code: number): Athlete {
         return this.athleteService.getAthleteByCode(Number(code));
     }
 
