@@ -1,5 +1,3 @@
-// src/Events/events.controller.ts
-
 import {
   Body,
   Controller,
@@ -7,23 +5,31 @@ import {
   Get,
   Param,
   Post,
-  Query} from '@nestjs/common';
+  Query,
+} from '@nestjs/common';
+import { EventsService, Event } from './events.service';
 
-//TODO : DTO import { CreateEventDto } from './dto/create-event.dto';
-import { EventsService } from './events.service';
-import { Event } from './Event';
-
-@Controller('events') //endpoint for events
+@Controller('events')
 export class EventsController {
   constructor(private readonly eventsService: EventsService) {}
 
   @Get()
-  async EventfindAll(@Query('country') country: string): Promise<Event[]> {
+  async EventfindAll(@Query('country') country?: string): Promise<Event[]> {
     return this.eventsService.EventfindAll(country);
   }
 
   @Get(':id')
   async EventfindOne(@Param('id') id: string): Promise<Event> {
     return this.eventsService.EventfindOne(id);
+  }
+
+  @Post()
+  async createEvent(@Body() event: Event): Promise<Event> {
+    return this.eventsService.createEvent(event);
+  }
+
+  @Delete(':id')
+  async deleteEvent(@Param('id') id: string): Promise<void> {
+    return this.eventsService.deleteEvent(id);
   }
 }
