@@ -1,13 +1,4 @@
-import {
-    Body,
-    Controller,
-    Delete,
-    Get,
-    HttpCode,
-    Param,
-    Post,
-    Query,
-} from '@nestjs/common';
+import {Body,Controller,Delete,Get,HttpCode,Param,Post,Query} from '@nestjs/common';
 import type { Athlete, Country } from './Athlete';
 import { AthleteService } from './athlete.service';
 
@@ -15,7 +6,21 @@ import { AthleteService } from './athlete.service';
 export class AthleteController {
     constructor(private readonly athleteService: AthleteService) {}
 
-    @Post()
+    @Get()
+    getAthletes(: Athlete[] {
+        if (code) {
+            return this.athleteService.getAthleteByCode(code);
+        }
+        return this.athleteService.getAllAthletes();
+    }
+
+    @Get(':code')
+    getAthlete(@Param('code') code: string): Athlete {
+        return this.athleteService.getAthleteByCode(Number(code));
+    }
+
+}
+    /*@Post()
     createAthlete(@Body() athlete: Athlete): Athlete {
         this.athleteService.addAthlete(athlete);
         return this.athleteService.getAthleteByCode(athlete.code);
@@ -44,5 +49,5 @@ export class AthleteController {
     @HttpCode(200)
     searchAthletes(@Body() { term }: { term: string }): Athlete[] {
         return this.athleteService.search(term);
-    }
-}
+    }*/
+

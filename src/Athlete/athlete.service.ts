@@ -16,7 +16,23 @@ export class AthleteService implements OnModuleInit {
         athletes.forEach((athlete) => this.addAthlete(athlete));
     }
 
-    addAthlete(athlete: Athlete) {
+    getAllAthletes(): Athlete[] {
+        return Array.from(this.storage.values()).sort((a, b) =>
+            a.name.localeCompare(b.name),
+        );
+    }
+
+    getAthleteByCode(code: number): Athlete {
+        const athlete = this.storage.get(code);
+
+        if (!athlete) {
+            throw new Error(`Athlete with code ${code} not found`);
+        }
+        return athlete;
+    }
+
+}
+    /*addAthlete(athlete: Athlete) {
         this.storage.set(athlete.code, athlete);
     }
 
@@ -49,5 +65,5 @@ export class AthleteService implements OnModuleInit {
         return Array.from(this.storage.values())
             .filter((athlete) => athlete.name.includes(term))
             .sort((a, b) => a.name.localeCompare(b.name));
-    }
-}
+    }*/
+
