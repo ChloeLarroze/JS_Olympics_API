@@ -27,7 +27,7 @@ export class EventsService implements OnModuleInit {
 
     // should wait for the file to be read before requests
     async  onModuleInit(): Promise<void> { 
-        await this.loadEventsFromFile('./data/dataset_json');
+        await this.loadEventsFromFile('./data/dataset_json/events.json');
     }    
     
     private async loadEventsFromFile(filePath: string): Promise<void> {
