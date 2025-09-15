@@ -21,6 +21,7 @@ export interface Country {
     name: string;
     long_name: string;
 }
+
 //interface finale Medaille
 export interface Medaille {
     medal: Medal;
