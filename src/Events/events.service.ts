@@ -51,6 +51,32 @@ export class EventsService implements OnModuleInit {
         return this.eventsById.get(id);
     }
 
+    //add a new event 
+    async createEvent(event: Event): Promise<Event> {
+        if (this.eventsById.has(event.event)) { //if event already exists then error
+            throw new Error('Event with this ID already exists');
+        }
+        this.eventsById.set(event.event, event);
+        return event;
+    }
+
+    //delete an event by its id 
+    async deleteEvent(id: string): Promise<void> {
+        if (!this.eventsById.has(id)) { //same if the event doesn't even exist, then error
+            throw new Error('Event with this ID does not exist');
+        }
+        this.eventsById.delete(id);
+    }   
+
+    //put a certain event as a favorite 
+    async favoriteEvent(id: string): Promise<Event> {
+        const event = this.eventsById.get(id);
+        if (!event) {
+            throw new Error('Event with this ID does not exist');
+        }
+        //TODO
+        return event;
+    }
 
     //others functs ? TODO -> think abt it ... :( 
 }   
