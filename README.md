@@ -40,6 +40,12 @@ relation btw entities if necessary / scheme ?
 
 ## API 
 JSON, methods, details
+
+<div align="center">
+    <img src="./.pics/schema.png" alt="Beach-volley Paris 2024" width="400px"/>
+    <p><em>Figure 2 : Schéma API</em></p>
+</div>
+
 ### Endpoints
 #### Athlètes (/athletes)
 GET /athletes - Liste tous les athlètes
