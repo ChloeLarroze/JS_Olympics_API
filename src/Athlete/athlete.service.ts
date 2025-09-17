@@ -12,19 +12,14 @@ export class AthleteService implements OnModuleInit {
 
     private async loadAthletesFromFile() {
         const data = await readFile('data/dataset_json/athletes.json', 'utf8');
-
         // nettoyer les NaN
         const safeJson = data.replace(/\bNaN\b/g, 'null');
-
         const parsed = JSON.parse(safeJson);
-
         // si le JSON est sous la forme { athletes: [...] }
         const athletes = Array.isArray(parsed) ? parsed : parsed.athletes;
-
         if (!Array.isArray(athletes)) {
             throw new Error('Invalid JSON format: expected an array of athletes');
         }
-
         athletes.forEach((athlete) => this.addAthlete(athlete));
     }
 
@@ -32,20 +27,20 @@ export class AthleteService implements OnModuleInit {
     this.storage.set(athlete.code, athlete);
     }
 
-getAllAthletes(): Athlete[] {
-    return Array.from(this.storage.values()).sort((a, b) =>
-        a.name.localeCompare(b.name),
-    );
-}
-
-getAthleteByCode(code: number): Athlete {
-    const athlete = this.storage.get(code);
-
-    if (!athlete) {
-        throw new Error(`Athlete with code ${code} not found`);
+    getAllAthletes(): Athlete[] {
+        return Array.from(this.storage.values()).sort((a, b) =>
+            a.name.localeCompare(b.name),
+        );
     }
-    return athlete;
-}
+
+    getAthleteByCode(code: number): Athlete {
+        const athlete = this.storage.get(code);
+
+        if (!athlete) {
+            throw new Error(`Athlete with code ${code} not found`);
+        }
+        return athlete;
+    }
 
 }
 
