@@ -6,16 +6,16 @@
 
 En 2024, la France a accueilli l’un des plus grands événements sportifs mondiaux : les Jeux Olympiques d’été de Paris. Pendant plusieurs semaines, des milliers d’athlètes venus des quatre coins du globe se sont affrontés dans plus de 300 épreuves, réparties sur des dizaines de disciplines sportives. Cet événement a également permis  de générer une quantité massive de données : identités des athlètes, pays représentés, performances réalisées, épreuves disputées, palmarès de médailles, etc. Si ces données sont publiquement disponibles, elles sont souvent fragmentées, difficiles à interroger et peu centralisées sous un format accessible pour des développeurs, analystes ou journalistes sportifs qui souhaiteraient les réutiliser.  
 
-Dans ce contexte, le Comité d’Organisation des Jeux de Paris 2024 a exprimé un besoin : **concevoir une API centralisée regroupant les données clés des JO** afin de faciliter leur consultation et leur exploitation dans d’autres projets (sites web, applications mobiles, visualisations de données, etc.).
-
-Nous essaierons ainsi de répondre à la problématique suivante: 
-> Comment centraliser et rendre accessibles les données massives des Jeux Olympiques de Paris 2024 de manière simple, rapide et structurée ?
-
+Dans ce contexte, le Comité d’Organisation des Jeux de Paris 2024 a exprimé un besoin : **concevoir une API regroupant les données clés des JO** afin de faciliter leur consultation et leur exploitation dans d’autres projets (sites web, applications mobiles, visualisations de données, etc.).
 
 <div align="center">
     <img src="./.pics/JO_eiffel.jpg" alt="Beach-volley Paris 2024" width="400px"/>
     <p><em>Figure 1 : Beach-volley Paris 2024</em></p>
 </div>
+
+Nous essaierons ainsi de répondre à la problématique suivante: 
+> Comment centraliser et rendre accessibles les données massives des Jeux Olympiques de Paris 2024 de manière simple, rapide et structurée ?
+
 
 <!-- --- -->
 
