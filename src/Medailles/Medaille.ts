@@ -30,6 +30,32 @@ export interface Medaille {
     country: Country;
 }
 
+export interface CountryMedalCount {
+    country: {
+        code: string;
+        name: string;
+        long_name: string;
+    };
+    medals: {
+        gold: number;
+        silver: number;
+        bronze: number;
+        total: number;
+    };
+    athletes: {
+        total: number;
+        male: number;
+        female: number;
+        // Remove the 'other' property
+    };
+    topDisciplines: Array<{
+        discipline: string;
+        count: number;
+    }>;
+    firstMedalDate?: string;
+    lastMedalDate?: string;
+}
+
 
 // // exemple data
 // const exampleMedaille: Medaille = {

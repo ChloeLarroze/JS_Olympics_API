@@ -10790,7 +10790,7 @@
     {
       "medal": {
         "type": "Bronze Medal",
-        "code": NaN
+        "code": null
       },
       "date": "2024-08-04",
       "athlete": {
@@ -23820,7 +23820,7 @@
         "name": "Group All-Around",
         "discipline": "Rhythmic Gymnastics",
         "type": "TEAM",
-        "url": NaN
+        "url": null
       },
       "country": {
         "code": "CHN",
@@ -23843,7 +23843,7 @@
         "name": "Group All-Around",
         "discipline": "Rhythmic Gymnastics",
         "type": "TEAM",
-        "url": NaN
+        "url": null
       },
       "country": {
         "code": "ISR",
@@ -23866,7 +23866,7 @@
         "name": "Group All-Around",
         "discipline": "Rhythmic Gymnastics",
         "type": "TEAM",
-        "url": NaN
+        "url": null
       },
       "country": {
         "code": "ITA",
@@ -23889,7 +23889,7 @@
         "name": "Individual All-Around",
         "discipline": "Rhythmic Gymnastics",
         "type": "ATH",
-        "url": NaN
+        "url": null
       },
       "country": {
         "code": "GER",
@@ -23912,7 +23912,7 @@
         "name": "Individual All-Around",
         "discipline": "Rhythmic Gymnastics",
         "type": "ATH",
-        "url": NaN
+        "url": null
       },
       "country": {
         "code": "BUL",
@@ -23935,7 +23935,7 @@
         "name": "Individual All-Around",
         "discipline": "Rhythmic Gymnastics",
         "type": "ATH",
-        "url": NaN
+        "url": null
       },
       "country": {
         "code": "ITA",
@@ -23958,7 +23958,7 @@
         "name": "Women's Heptathlon",
         "discipline": "Athletics",
         "type": "ATH",
-        "url": NaN
+        "url": null
       },
       "country": {
         "code": "BEL",
@@ -23981,7 +23981,7 @@
         "name": "Women's Heptathlon",
         "discipline": "Athletics",
         "type": "ATH",
-        "url": NaN
+        "url": null
       },
       "country": {
         "code": "GBR",
@@ -24004,7 +24004,7 @@
         "name": "Women's Heptathlon",
         "discipline": "Athletics",
         "type": "ATH",
-        "url": NaN
+        "url": null
       },
       "country": {
         "code": "BEL",
