@@ -19,64 +19,27 @@ let AthleteController = class AthleteController {
     constructor(athleteService) {
         this.athleteService = athleteService;
     }
-    createAthlete(athlete) {
-        this.athleteService.addAthlete(athlete);
-        return this.athleteService.getAthleteByCode(athlete.code);
-    }
-    getAthletes(countryCode) {
-        if (countryCode) {
-            const country = { code: countryCode, name: '' };
-            return this.athleteService.getAthletesByCountry(country);
-        }
+    getAthletes() {
         return this.athleteService.getAllAthletes();
     }
     getAthlete(code) {
         return this.athleteService.getAthleteByCode(Number(code));
     }
-    deleteAthlete(code) {
-        this.athleteService.removeByCode(Number(code));
-    }
-    searchAthletes({ term }) {
-        return this.athleteService.search(term);
-    }
 };
 exports.AthleteController = AthleteController;
 __decorate([
-    (0, common_1.Post)(),
-    __param(0, (0, common_1.Body)()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
-    __metadata("design:returntype", Object)
-], AthleteController.prototype, "createAthlete", null);
-__decorate([
     (0, common_1.Get)(),
-    __param(0, (0, common_1.Query)('countryCode')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String]),
-    __metadata("design:returntype", Array)
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
 ], AthleteController.prototype, "getAthletes", null);
 __decorate([
     (0, common_1.Get)(':code'),
     __param(0, (0, common_1.Param)('code')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String]),
+    __metadata("design:paramtypes", [Number]),
     __metadata("design:returntype", Object)
 ], AthleteController.prototype, "getAthlete", null);
-__decorate([
-    (0, common_1.Delete)(':code'),
-    __param(0, (0, common_1.Param)('code')),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String]),
-    __metadata("design:returntype", void 0)
-], AthleteController.prototype, "deleteAthlete", null);
-__decorate([
-    (0, common_1.Post)('search'),
-    (0, common_1.HttpCode)(200),
-    __param(0, (0, common_1.Body)()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
-    __metadata("design:returntype", Array)
-], AthleteController.prototype, "searchAthletes", null);
 exports.AthleteController = AthleteController = __decorate([
     (0, common_1.Controller)('/athletes'),
     __metadata("design:paramtypes", [athlete_service_1.AthleteService])

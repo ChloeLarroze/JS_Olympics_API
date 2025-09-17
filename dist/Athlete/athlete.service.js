@@ -24,28 +24,15 @@ let AthleteService = class AthleteService {
     addAthlete(athlete) {
         this.storage.set(athlete.code, athlete);
     }
+    getAllAthletes() {
+        return Array.from(this.storage.values()).sort((a, b) => a.name.localeCompare(b.name));
+    }
     getAthleteByCode(code) {
         const athlete = this.storage.get(code);
         if (!athlete) {
             throw new Error(`Athlete with code ${code} not found`);
         }
         return athlete;
-    }
-    getAllAthletes() {
-        return Array.from(this.storage.values()).sort((a, b) => a.name.localeCompare(b.name));
-    }
-    getAthletesByCountry(country) {
-        return this.getAllAthletes()
-            .filter((athlete) => athlete.country.code === country.code)
-            .sort((a, b) => a.country.name.localeCompare(b.country.name));
-    }
-    removeByCode(code) {
-        this.storage.delete(code);
-    }
-    search(term) {
-        return Array.from(this.storage.values())
-            .filter((athlete) => athlete.name.includes(term))
-            .sort((a, b) => a.name.localeCompare(b.name));
     }
 };
 exports.AthleteService = AthleteService;
