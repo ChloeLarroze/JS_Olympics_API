@@ -42,6 +42,12 @@ export class AthleteService implements OnModuleInit {
         return athlete;
     }
 
+    search(term: string) {
+        return Array.from(this.storage.values())
+            .filter((athlete) => athlete.name.includes(term))
+            .sort((a, b) => a.name.localeCompare(b.name));
+    }
+
 }
 
 

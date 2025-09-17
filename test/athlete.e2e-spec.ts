@@ -2,10 +2,6 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { AthleteService} from "../src/Athlete/athlete.service";
 import { Athlete } from '../src/Athlete/Athlete';
 import {FavoriteService} from "../src/Athlete/favorite.service";
-import {FavoriteModule} from "../src/Athlete/favorite.module";
-import {AthleteModule} from "../src/Athlete/athlete.module";
-import {AthleteController} from "../src/Athlete/athlete.controller";
-import { Nationality } from '../src/Athlete/Athlete';
 
 
 describe('AthleteService (e2e)', () => {
@@ -94,6 +90,7 @@ describe('AthleteService (e2e)', () => {
     });
 
     it('Test 6 → vérifier si un athlète est en favori', () => {
+
         service.addAthlete(mockAthlete1);
         service.addAthlete(mockAthlete2);
         favorite.addFavorite(userId, mockAthlete1.code);
@@ -102,10 +99,26 @@ describe('AthleteService (e2e)', () => {
         expect(favorite.isFavorite(userId, mockAthlete2.code)).toBe(false);
     });
 
+    it('Test 6 bis→ consulter favorie', () => {
+        service.addAthlete(mockAthlete1);
+        service.addAthlete(mockAthlete2);
+        favorite.addFavorite(userId, mockAthlete1.code);
+        favorite.addFavorite(userId, mockAthlete2.code);
+        const favs = favorite.getFavorites(userId); // un userId qui n’existe pas
+        expect(Array.isArray(favs)).toBe(true);
+        expect(favs.length).toBe(2);
+    });
+
     it('Test 7 → favori pour un utilisateur sans favoris', () => {
         const favs = favorite.getFavorites(999); // un userId qui n’existe pas
         expect(Array.isArray(favs)).toBe(true);
         expect(favs.length).toBe(0);
+    });
+
+    it('Test 8 → search', () => {
+        service.addAthlete(mockAthlete1);
+        const results = service.search('Usain');
+        expect(results).toContainEqual(mockAthlete1);
     });
 
 });

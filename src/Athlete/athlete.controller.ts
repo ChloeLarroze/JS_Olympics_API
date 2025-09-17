@@ -16,6 +16,11 @@ export class AthleteController {
         return this.athleteService.getAthleteByCode(Number(code));
     }
 
+    @Post('search')
+    searchAthletes(@Body() { term }: { term: string }): Athlete[] {
+        return this.athleteService.search(term);
+    }
+
 }
     /*@Post()
     createAthlete(@Body() athlete: Athlete): Athlete {
