@@ -1,7 +1,5 @@
-import { Controller, Get } from '@nestjs/common';
 import { MedaillesService } from './medailles.service';
 import { Medaille } from './Medaille';
-
 import { Body, Controller, Delete, Get, Param, Post, Query} from '@nestjs/common';
 
 

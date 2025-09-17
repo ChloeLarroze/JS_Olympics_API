@@ -67,22 +67,65 @@ def csv_to_json():
         athletes_list.append(athlete)
     
     #EVENTS
+    # events_list = []
+    # for _, row in events_df.iterrows():
+    #     event = {
+    #         "event": row.get('event', ''),
+    #         "tag": row.get('tag', ''),
+    #         "sport": {
+    #             "name": row.get('sport', ''),
+    #             "code": row.get('sport_code', ''),
+    #             "url": row.get('sport_url', '')
+    #         },
+    #         "discipline": row.get('sport', ''),  #Sport = discipline here
+    #         "event_type": "Individual",  #by default (need to be updated manually for team events) TODO
+    #         "url_event": f"/events/{row.get('sport_code', '').lower()}/{row.get('event', '').lower().replace(' ', '-')}"
+    #     }
+    #     events_list.append(event)
+    
+# EVENTS - Modified to include location data
+    def load_venue_coordinates_from_csv():
+        try:
+            venues_df = pd.read_csv(f'{csv_file_path}/venues.csv')
+            coordinates = {}
+            for _, row in venues_df.iterrows():
+                coordinates[row['venue']] = {
+                    "lat": row['lat'],
+                    "lng": row['lng']
+                }
+            return coordinates
+        
     events_list = []
     for _, row in events_df.iterrows():
-        event = {
-            "event": row.get('event', ''),
-            "tag": row.get('tag', ''),
-            "sport": {
-                "name": row.get('sport', ''),
-                "code": row.get('sport_code', ''),
-                "url": row.get('sport_url', '')
-            },
-            "discipline": row.get('sport', ''),  #Sport = discipline here
-            "event_type": "Individual",  #by default (need to be updated manually for team events) TODO
-            "url_event": f"/events/{row.get('sport_code', '').lower()}/{row.get('event', '').lower().replace(' ', '-')}"
+        event_name = row.get('event', '')
+        
+        venue = row.get('venue', '')
+        location_desc = row.get('location_desc', '')
+            
+        # Get coordinates from our mapping
+        coordinates = load_venue_coordinates_from_csv().get(venue, {"lat": None, "lng": None})
+        
+        venue_info = {
+            "name": venue,
+            "description": location_desc,
+            "coordinates": coordinates
         }
-        events_list.append(event)
     
+    event = {
+        "event": event_name,
+        "tag": row.get('tag', ''),
+        "sport": {
+            "name": row.get('sport', ''),
+            "code": row.get('sport_code', ''),
+            "url": row.get('sport_url', '')
+        },
+        "discipline": row.get('sport', ''),
+        "event_type": "Individual",  # You might want to extract this from event name
+        "url_event": f"/events/{row.get('sport_code', '').lower()}/{event_name.lower().replace(' ', '-').replace('/', '-')}",
+        "location": venue_info  
+    }
+    events_list.append(event)
+
     #MEDALS
     medals_list = []
     for _, row in medals_df.iterrows():
@@ -112,14 +155,14 @@ def csv_to_json():
         medals_list.append(medal)
     
     #Json output
-    with open(f'{json_file_path}/athletes.json', 'w', encoding='utf-8') as f:
-        json.dump({"athletes": athletes_list}, f, indent=2, ensure_ascii=False)
+    # with open(f'{json_file_path}/athletes.json', 'w', encoding='utf-8') as f:
+    #     json.dump({"athletes": athletes_list}, f, indent=2, ensure_ascii=False)
 
     with open(f'{json_file_path}/events.json', 'w', encoding='utf-8') as f:
         json.dump({"events": events_list}, f, indent=2, ensure_ascii=False)
 
-    with open(f'{json_file_path}/medals.json', 'w', encoding='utf-8') as f:
-        json.dump({"medals": medals_list}, f, indent=2, ensure_ascii=False)
+    # with open(f'{json_file_path}/medals.json', 'w', encoding='utf-8') as f:
+    #     json.dump({"medals": medals_list}, f, indent=2, ensure_ascii=False)
 
 if __name__ == "__main__":
     csv_to_json()

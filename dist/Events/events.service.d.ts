@@ -1,5 +1,5 @@
 import { Event } from './Events';
-import { OnModuleInit } from '@nestjs/common/interfaces/hooks/on-module-init.interface';
+import { OnModuleInit } from '@nestjs/common';
 export declare class EventsService implements OnModuleInit {
     private eventsById;
     constructor();

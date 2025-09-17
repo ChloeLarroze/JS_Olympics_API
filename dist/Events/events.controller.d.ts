@@ -1,4 +1,5 @@
-import { EventsService, Event } from './events.service';
+import { EventsService } from './events.service';
+import { Event } from './Events';
 export declare class EventsController {
     private readonly eventsService;
     constructor(eventsService: EventsService);

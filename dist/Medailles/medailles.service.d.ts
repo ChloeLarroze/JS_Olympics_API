@@ -1,5 +1,5 @@
 import { Medaille } from './Medaille';
-import { OnModuleInit } from '@nestjs/common/interfaces/hooks/on-module-init.interface';
+import { OnModuleInit } from '@nestjs/common';
 export declare class MedaillesService implements OnModuleInit {
     private medailles;
     constructor();

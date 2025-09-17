@@ -2,22 +2,12 @@
 
 import { Injectable } from '@nestjs/common';
 import { Event } from './Events';
-import { OnModuleInit } from '@nestjs/common/interfaces/hooks/on-module-init.interface';
+import { OnModuleInit } from '@nestjs/common';
+
 
 //import { events } from './Events'; //example data for testing
 import * as fs from 'fs';
 import * as path from 'path';
-
-
-//REMINDER
-// export interface Event {
-//     event: string;
-//     tag: string;
-//     sport: Sport;
-//     discipline: string;
-//     event_type: string;
-//     url_event: string;
-// // }
 
 @Injectable()
 export class EventsService implements OnModuleInit {
@@ -48,8 +38,11 @@ export class EventsService implements OnModuleInit {
 
     //returns a single event by its id (event name here :) )
     async EventfindOne(id: string): Promise<Event> {
-        return this.eventsById.get(id);
+    const event = this.eventsById.get(id);
+    if (!event) throw new Error('Event not found'); //case where event is undefined
+    return event;
     }
+
 
     //add a new event 
     async createEvent(event: Event): Promise<Event> {

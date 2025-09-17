@@ -1,3 +1,5 @@
+// src/app.module.ts
+// we need this file to import/gather all our modules here 
 import { Module } from '@nestjs/common';
 import { EventsModule } from './Events/events.module';
 import { MedaillesModule } from './Medailles/medailles.module';

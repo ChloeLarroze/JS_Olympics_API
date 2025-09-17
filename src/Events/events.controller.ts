@@ -7,7 +7,8 @@ import {
   Post,
   Query,
 } from '@nestjs/common';
-import { EventsService, Event } from './events.service';
+import { EventsService } from './events.service';
+import { Event } from './Events';
 
 @Controller('events')
 export class EventsController {

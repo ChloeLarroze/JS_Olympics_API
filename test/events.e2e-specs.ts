@@ -2,7 +2,7 @@ import type { INestApplication } from '@nestjs/common';
 import { Test, type TestingModule } from '@nestjs/testing';
 import * as request from 'supertest';
 import type supertest from 'supertest';
-import { EventsModule } from '../src/events.module';
+import { EventsModule } from '../src/Events/events.module';
 
 describe('Events API', () => {
     let app: INestApplication;

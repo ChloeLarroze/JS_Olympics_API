@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { Medaille } from './Medaille';
-import { OnModuleInit } from '@nestjs/common/interfaces/hooks/on-module-init.interface';
+import { OnModuleInit } from '@nestjs/common';
+
 
 //import { events } from './Events'; //example data for testing
 import * as fs from 'fs';
@@ -40,7 +41,9 @@ export class MedaillesService implements OnModuleInit {
 
     //returns a single medaille by its id (athlete code + index here )
     async MedaillefindOne(id: string): Promise<Medaille> {
-        return this.medailles.get(id);
-    }           
+        const medaille = this.medailles.get(id);
+        if (!medaille) throw new Error('Medaille not found'); //case where medaille is undefined
+        return medaille;
+    }
 
 }

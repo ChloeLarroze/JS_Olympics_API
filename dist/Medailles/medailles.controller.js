@@ -10,8 +10,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MedaillesController = void 0;
-const common_1 = require("@nestjs/common");
 const medailles_service_1 = require("./medailles.service");
+const common_1 = require("@nestjs/common");
 let MedaillesController = class MedaillesController {
     constructor(medaillesService) {
         this.medaillesService = medaillesService;

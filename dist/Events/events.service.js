@@ -65,7 +65,10 @@ let EventsService = class EventsService {
         return Array.from(this.eventsById.values());
     }
     async EventfindOne(id) {
-        return this.eventsById.get(id);
+        const event = this.eventsById.get(id);
+        if (!event)
+            throw new Error('Event not found');
+        return event;
     }
     async createEvent(event) {
         if (this.eventsById.has(event.event)) {

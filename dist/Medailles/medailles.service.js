@@ -68,7 +68,10 @@ let MedaillesService = class MedaillesService {
         return Array.from(this.medailles.values());
     }
     async MedaillefindOne(id) {
-        return this.medailles.get(id);
+        const medaille = this.medailles.get(id);
+        if (!medaille)
+            throw new Error('Medaille not found');
+        return medaille;
     }
 };
 exports.MedaillesService = MedaillesService;
