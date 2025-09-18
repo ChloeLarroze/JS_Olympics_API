@@ -26,7 +26,6 @@ L’objectif est de manipuler des données issues des Jeux Olympiques d’été 
 ```bash
 ├── data
 │   ├── csv-2-json.py
-│   ├── csv2jsao.py
 │   ├── dataset_csv
 │   │   ├── athletes.csv
 │   │   ├── events.csv

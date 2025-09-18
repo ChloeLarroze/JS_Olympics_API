@@ -1,0 +1,330 @@
+event,tag,sport,sport_code,sport_url,venue_name,venue_lat,venue_long,venue_name_clean
+Men's Individual,archery,Archery,ARC,https://olympics.com/en/paris-2024/sports/archery,Esplanade des Invalides (Les Invalides),48.8584337,2.3138998,Esplanade des Invalides
+Women's Individual,archery,Archery,ARC,https://olympics.com/en/paris-2024/sports/archery,Esplanade des Invalides (Les Invalides),48.8584337,2.3138998,Esplanade des Invalides
+Men's Team,archery,Archery,ARC,https://olympics.com/en/paris-2024/sports/archery,Esplanade des Invalides (Les Invalides),48.8584337,2.3138998,Esplanade des Invalides
+Women's Team,archery,Archery,ARC,https://olympics.com/en/paris-2024/sports/archery,Esplanade des Invalides (Les Invalides),48.8584337,2.3138998,Esplanade des Invalides
+Mixed Team,archery,Archery,ARC,https://olympics.com/en/paris-2024/sports/archery,Esplanade des Invalides (Les Invalides),48.8584337,2.3138998,Esplanade des Invalides
+Men's Team,artistic-gymnastics,Artistic Gymnastics,GAR,https://olympics.com/en/paris-2024/sports/artistic-gymnastics,Accor Arena,48.8387085,2.3787666,Accor Arena
+Men's All-Around,artistic-gymnastics,Artistic Gymnastics,GAR,https://olympics.com/en/paris-2024/sports/artistic-gymnastics,Accor Arena,48.8387085,2.3787666,Accor Arena
+Men's Floor Exercise,artistic-gymnastics,Artistic Gymnastics,GAR,https://olympics.com/en/paris-2024/sports/artistic-gymnastics,Accor Arena,48.8387085,2.3787666,Accor Arena
+Men's Pommel Horse,artistic-gymnastics,Artistic Gymnastics,GAR,https://olympics.com/en/paris-2024/sports/artistic-gymnastics,Accor Arena,48.8387085,2.3787666,Accor Arena
+Men's Rings,artistic-gymnastics,Artistic Gymnastics,GAR,https://olympics.com/en/paris-2024/sports/artistic-gymnastics,Accor Arena,48.8387085,2.3787666,Accor Arena
+Men's Vault,artistic-gymnastics,Artistic Gymnastics,GAR,https://olympics.com/en/paris-2024/sports/artistic-gymnastics,Accor Arena,48.8387085,2.3787666,Accor Arena
+Men's Parallel Bars,artistic-gymnastics,Artistic Gymnastics,GAR,https://olympics.com/en/paris-2024/sports/artistic-gymnastics,Accor Arena,48.8387085,2.3787666,Accor Arena
+Men's Horizontal Bar,artistic-gymnastics,Artistic Gymnastics,GAR,https://olympics.com/en/paris-2024/sports/artistic-gymnastics,Accor Arena,48.8387085,2.3787666,Accor Arena
+Women's Team,artistic-gymnastics,Artistic Gymnastics,GAR,https://olympics.com/en/paris-2024/sports/artistic-gymnastics,Accor Arena,48.8387085,2.3787666,Accor Arena
+Women's All-Around,artistic-gymnastics,Artistic Gymnastics,GAR,https://olympics.com/en/paris-2024/sports/artistic-gymnastics,Accor Arena,48.8387085,2.3787666,Accor Arena
+Women's Vault,artistic-gymnastics,Artistic Gymnastics,GAR,https://olympics.com/en/paris-2024/sports/artistic-gymnastics,Accor Arena,48.8387085,2.3787666,Accor Arena
+Women's Uneven Bars,artistic-gymnastics,Artistic Gymnastics,GAR,https://olympics.com/en/paris-2024/sports/artistic-gymnastics,Accor Arena,48.8387085,2.3787666,Accor Arena
+Women's Balance Beam,artistic-gymnastics,Artistic Gymnastics,GAR,https://olympics.com/en/paris-2024/sports/artistic-gymnastics,Accor Arena,48.8387085,2.3787666,Accor Arena
+Women's Floor Exercise,artistic-gymnastics,Artistic Gymnastics,GAR,https://olympics.com/en/paris-2024/sports/artistic-gymnastics,Accor Arena,48.8387085,2.3787666,Accor Arena
+Duet,artistic-swimming,Artistic Swimming,SWA,https://olympics.com/en/paris-2024/sports/artistic-swimming,Centre Aquatique Olympique Métropole du Grand Paris (Artistic Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Team,artistic-swimming,Artistic Swimming,SWA,https://olympics.com/en/paris-2024/sports/artistic-swimming,Centre Aquatique Olympique Métropole du Grand Paris (Artistic Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Men's 100m,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Men's 200m,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Men's 400m,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Men's 800m,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Men's 1500m,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Men's 5000m,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+"Men's 10,000m",athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Men's Marathon,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Men's 3000m Steeplechase,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Men's 110m Hurdles,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Men's 400m Hurdles,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Men's High Jump,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Men's Pole Vault,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Men's Long Jump,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Men's Triple Jump,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Men's Shot Put,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Men's Discus Throw,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Men's Hammer Throw,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Men's Javelin Throw,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Men's Decathlon,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Men's 20km Race Walk,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Men's 4 x 100m Relay,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Men's 4 x 400m Relay,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Women's 100m,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Women's 200m,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Women's 400m,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Women's 800m,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Women's 1500m,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Women's 5000m,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+"Women's 10,000m",athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Women's Marathon,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Women's 3000m Steeplechase,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Women's 100m Hurdles,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Women's 400m Hurdles,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Women's High Jump,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Women's Pole Vault,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Women's Long Jump,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Women's Triple Jump,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Women's Shot Put,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Women's Discus Throw,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Women's Hammer Throw,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Women's Javelin Throw,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Women's Heptathlon,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Women's 20km Race Walk,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Women's 4 x 100m Relay,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Women's 4 x 400m Relay,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+4 x 400m Relay Mixed,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Marathon Race Walk Relay Mixed,athletics,Athletics,ATH,https://olympics.com/en/paris-2024/sports/athletics,Stade de France,48.8557562,2.3535027,Stade de France
+Men's Singles,badminton,Badminton,BDM,https://olympics.com/en/paris-2024/sports/badminton,Porte de la Chapelle (Adidas Arena),48.8977035,2.3594563,Porte de la Chapelle
+Women's Singles,badminton,Badminton,BDM,https://olympics.com/en/paris-2024/sports/badminton,Porte de la Chapelle (Adidas Arena),48.8977035,2.3594563,Porte de la Chapelle
+Men's Doubles,badminton,Badminton,BDM,https://olympics.com/en/paris-2024/sports/badminton,Porte de la Chapelle (Adidas Arena),48.8977035,2.3594563,Porte de la Chapelle
+Women's Doubles,badminton,Badminton,BDM,https://olympics.com/en/paris-2024/sports/badminton,Porte de la Chapelle (Adidas Arena),48.8977035,2.3594563,Porte de la Chapelle
+Mixed Doubles,badminton,Badminton,BDM,https://olympics.com/en/paris-2024/sports/badminton,Porte de la Chapelle (Adidas Arena),48.8977035,2.3594563,Porte de la Chapelle
+Men,basketball,Basketball,BKB,https://olympics.com/en/paris-2024/sports/basketball,Accor Arena (Basketball),48.8387085,2.3787666,Accor Arena
+Women,basketball,Basketball,BKB,https://olympics.com/en/paris-2024/sports/basketball,Accor Arena (Basketball),48.8387085,2.3787666,Accor Arena
+Men,3x3-basketball,3x3 Basketball,BK3,https://olympics.com/en/paris-2024/sports/3x3-basketball,Place de la Concorde (3x3 Basketball),48.8655715,2.3212248,Place de la Concorde
+Women,3x3-basketball,3x3 Basketball,BK3,https://olympics.com/en/paris-2024/sports/3x3-basketball,Place de la Concorde (3x3 Basketball),48.8655715,2.3212248,Place de la Concorde
+Men,beach-volleyball,Beach Volleyball,VBV,https://olympics.com/en/paris-2024/sports/beach-volleyball,Eiffel Tower Stadium (Beach Volleyball at Champ de Mars),48.858093,2.294694,Eiffel Tower Stadium
+Women,beach-volleyball,Beach Volleyball,VBV,https://olympics.com/en/paris-2024/sports/beach-volleyball,Eiffel Tower Stadium (Beach Volleyball at Champ de Mars),48.858093,2.294694,Eiffel Tower Stadium
+Men's 51kg,boxing,Boxing,BOX,https://olympics.com/en/paris-2024/sports/boxing,Stade Roland-Garros (Boxing),48.846869,2.2484179,Stade Roland-Garros
+Men's 57kg,boxing,Boxing,BOX,https://olympics.com/en/paris-2024/sports/boxing,Stade Roland-Garros (Boxing),48.846869,2.2484179,Stade Roland-Garros
+Men's 63.5kg,boxing,Boxing,BOX,https://olympics.com/en/paris-2024/sports/boxing,Stade Roland-Garros (Boxing),48.846869,2.2484179,Stade Roland-Garros
+Men's 71kg,boxing,Boxing,BOX,https://olympics.com/en/paris-2024/sports/boxing,Stade Roland-Garros (Boxing),48.846869,2.2484179,Stade Roland-Garros
+Men's 80kg,boxing,Boxing,BOX,https://olympics.com/en/paris-2024/sports/boxing,Stade Roland-Garros (Boxing),48.846869,2.2484179,Stade Roland-Garros
+Men's 92kg,boxing,Boxing,BOX,https://olympics.com/en/paris-2024/sports/boxing,Stade Roland-Garros (Boxing),48.846869,2.2484179,Stade Roland-Garros
+Men's +92kg,boxing,Boxing,BOX,https://olympics.com/en/paris-2024/sports/boxing,Stade Roland-Garros (Boxing),48.846869,2.2484179,Stade Roland-Garros
+Women's 50kg,boxing,Boxing,BOX,https://olympics.com/en/paris-2024/sports/boxing,Stade Roland-Garros (Boxing),48.846869,2.2484179,Stade Roland-Garros
+Women's 54kg,boxing,Boxing,BOX,https://olympics.com/en/paris-2024/sports/boxing,Stade Roland-Garros (Boxing),48.846869,2.2484179,Stade Roland-Garros
+Women's 57kg,boxing,Boxing,BOX,https://olympics.com/en/paris-2024/sports/boxing,Stade Roland-Garros (Boxing),48.846869,2.2484179,Stade Roland-Garros
+Women's 60kg,boxing,Boxing,BOX,https://olympics.com/en/paris-2024/sports/boxing,Stade Roland-Garros (Boxing),48.846869,2.2484179,Stade Roland-Garros
+Women's 66kg,boxing,Boxing,BOX,https://olympics.com/en/paris-2024/sports/boxing,Stade Roland-Garros (Boxing),48.846869,2.2484179,Stade Roland-Garros
+Women's 75kg,boxing,Boxing,BOX,https://olympics.com/en/paris-2024/sports/boxing,Stade Roland-Garros (Boxing),48.846869,2.2484179,Stade Roland-Garros
+B-Boys,breaking,Breaking,BKG,https://olympics.com/en/paris-2024/sports/breaking,Place de la Concorde (Breaking),48.8655715,2.3212248,Place de la Concorde
+B-Girls,breaking,Breaking,BKG,https://olympics.com/en/paris-2024/sports/breaking,Place de la Concorde (Breaking),48.8655715,2.3212248,Place de la Concorde
+Men's Kayak Single,canoe-kayak-slalom,Canoe Slalom,CSL,https://olympics.com/en/paris-2024/sports/canoe-kayak-slalom,Le Bourget (Canoe Slalom),48.9303879,2.4232468,Le Bourget
+Women's Kayak Single,canoe-kayak-slalom,Canoe Slalom,CSL,https://olympics.com/en/paris-2024/sports/canoe-kayak-slalom,Le Bourget (Canoe Slalom),48.9303879,2.4232468,Le Bourget
+Men's Canoe Single,canoe-kayak-slalom,Canoe Slalom,CSL,https://olympics.com/en/paris-2024/sports/canoe-kayak-slalom,Le Bourget (Canoe Slalom),48.9303879,2.4232468,Le Bourget
+Women's Canoe Single,canoe-kayak-slalom,Canoe Slalom,CSL,https://olympics.com/en/paris-2024/sports/canoe-kayak-slalom,Le Bourget (Canoe Slalom),48.9303879,2.4232468,Le Bourget
+Men's Kayak Cross,canoe-kayak-slalom,Canoe Slalom,CSL,https://olympics.com/en/paris-2024/sports/canoe-kayak-slalom,Le Bourget (Canoe Slalom),48.9303879,2.4232468,Le Bourget
+Women's Kayak Cross,canoe-kayak-slalom,Canoe Slalom,CSL,https://olympics.com/en/paris-2024/sports/canoe-kayak-slalom,Le Bourget (Canoe Slalom),48.9303879,2.4232468,Le Bourget
+Men's Kayak Single 1000m,canoe-kayak-flatwater,Canoe Sprint,CSP,https://olympics.com/en/paris-2024/sports/canoe-kayak-flatwater,Vaires-sur-Marne (Canoe Sprint),48.52001,2.39,Vaires-sur-Marne
+Men's Kayak Double 500m,canoe-kayak-flatwater,Canoe Sprint,CSP,https://olympics.com/en/paris-2024/sports/canoe-kayak-flatwater,Vaires-sur-Marne (Canoe Sprint),48.52001,2.39,aires-sur-Marne
+Men's Kayak Four 500m,canoe-kayak-flatwater,Canoe Sprint,CSP,https://olympics.com/en/paris-2024/sports/canoe-kayak-flatwater,Vaires-sur-Marne (Canoe Sprint),48.52001,2.39,Vaires-sur-Marne
+Men's Canoe Single 1000m,canoe-kayak-flatwater,Canoe Sprint,CSP,https://olympics.com/en/paris-2024/sports/canoe-kayak-flatwater,Vaires-sur-Marne (Canoe Sprint),48.52001,2.39,Vaires-sur-Marne
+Men's Canoe Double 500m,canoe-kayak-flatwater,Canoe Sprint,CSP,https://olympics.com/en/paris-2024/sports/canoe-kayak-flatwater,Vaires-sur-Marne (Canoe Sprint),48.52001,2.39,Vaires-sur-Marne
+Women's Kayak Single 500m,canoe-kayak-flatwater,Canoe Sprint,CSP,https://olympics.com/en/paris-2024/sports/canoe-kayak-flatwater,Vaires-sur-Marne (Canoe Sprint),48.52001,2.39,Vaires-sur-Marne
+Women's Kayak Double 500m,canoe-kayak-flatwater,Canoe Sprint,CSP,https://olympics.com/en/paris-2024/sports/canoe-kayak-flatwater,Vaires-sur-Marne (Canoe Sprint),48.52001,2.39,Vaires-sur-Marne
+Women's Kayak Four 500m,canoe-kayak-flatwater,Canoe Sprint,CSP,https://olympics.com/en/paris-2024/sports/canoe-kayak-flatwater,Vaires-sur-Marne (Canoe Sprint),48.52001,2.39,Vaires-sur-Marne
+Women's Canoe Single 200m,canoe-kayak-flatwater,Canoe Sprint,CSP,https://olympics.com/en/paris-2024/sports/canoe-kayak-flatwater,Vaires-sur-Marne (Canoe Sprint),48.52001,2.39,Vaires-sur-Marne
+Women's Canoe Double 500m,canoe-kayak-flatwater,Canoe Sprint,CSP,https://olympics.com/en/paris-2024/sports/canoe-kayak-flatwater,Vaires-sur-Marne (Canoe Sprint),48.52001,2.39,Vaires-sur-Marne
+Women's Park,cycling-bmx-freestyle,Cycling BMX Freestyle,BMF,https://olympics.com/en/paris-2024/sports/cycling-bmx-freestyle,Champ de Mars (BMX Freestyle),48.8561446,2.2978204,Champ de Mars
+Men's Park,cycling-bmx-freestyle,Cycling BMX Freestyle,BMF,https://olympics.com/en/paris-2024/sports/cycling-bmx-freestyle,Champ de Mars (BMX Freestyle),48.8561446,2.2978204,Champ de Mars
+Women,cycling-bmx-racing,Cycling BMX Racing,BMX,https://olympics.com/en/paris-2024/sports/cycling-bmx-racing,Vélodrome national de Saint-Quentin-en-Yvelines (Stade de France area),48.78801,2.03496,Vélodrome national de Saint-Quentin-en-Yvelines
+Men,cycling-bmx-racing,Cycling BMX Racing,BMX,https://olympics.com/en/paris-2024/sports/cycling-bmx-racing,Vélodrome national de Saint-Quentin-en-Yvelines (Stade de France area),48.78801,2.03496,Vélodrome national de Saint-Quentin-en-Yvelines
+Men's Cross-country,cycling-mountain-bike,Cycling Mountain Bike,MTB,https://olympics.com/en/paris-2024/sports/cycling-mountain-bike,Elancourt Hil,48.7883,1.9681,Elancourt Hil
+Women's Cross-country,cycling-mountain-bike,Cycling Mountain Bike,MTB,https://olympics.com/en/paris-2024/sports/cycling-mountain-bike,Elancourt Hil,48.7883,1.9681,Elancourt Hil
+Men's Road Race,cycling-road,Cycling Road,CRD,https://olympics.com/en/paris-2024/sports/cycling-road,Paris (Cycling Road),48.8588897,2.320041,Paris
+Women's Road Race,cycling-road,Cycling Road,CRD,https://olympics.com/en/paris-2024/sports/cycling-road,Paris (Cycling Road),48.8588897,2.320041,Paris
+Men's Individual Time Trial,cycling-road,Cycling Road,CRD,https://olympics.com/en/paris-2024/sports/cycling-road,Paris (Cycling Road),48.8588897,2.320041,Paris
+Women's Individual Time Trial,cycling-road,Cycling Road,CRD,https://olympics.com/en/paris-2024/sports/cycling-road,Paris (Cycling Road),48.8588897,2.320041,Paris
+Men's Team Sprint,cycling-track,Cycling Track,CTR,https://olympics.com/en/paris-2024/sports/cycling-track,Vélodrome National / Velodrome,48.78801,2.03496,Vélodrome National / Velodrome
+Men's Sprint,cycling-track,Cycling Track,CTR,https://olympics.com/en/paris-2024/sports/cycling-track,Vélodrome National / Velodrome,48.78801,2.03496,Vélodrome National / Velodrome
+Men's Keirin,cycling-track,Cycling Track,CTR,https://olympics.com/en/paris-2024/sports/cycling-track,Vélodrome National / Velodrome,48.78801,2.03496,Vélodrome National / Velodrome
+Men's Team Pursuit,cycling-track,Cycling Track,CTR,https://olympics.com/en/paris-2024/sports/cycling-track,Vélodrome National / Velodrome,48.78801,2.03496,Vélodrome National / Velodrome
+Men's Omnium,cycling-track,Cycling Track,CTR,https://olympics.com/en/paris-2024/sports/cycling-track,Vélodrome National / Velodrome,48.78801,2.03496,Vélodrome National / Velodrome
+Men's Madison,cycling-track,Cycling Track,CTR,https://olympics.com/en/paris-2024/sports/cycling-track,Vélodrome National / Velodrome,48.78801,2.03496,Vélodrome National / Velodrome
+Women's Team Sprint,cycling-track,Cycling Track,CTR,https://olympics.com/en/paris-2024/sports/cycling-track,Vélodrome National / Velodrome,48.78801,2.03496,Vélodrome National / Velodrome
+Women's Sprint,cycling-track,Cycling Track,CTR,https://olympics.com/en/paris-2024/sports/cycling-track,Vélodrome National / Velodrome,48.78801,2.03496,Vélodrome National / Velodrome
+Women's Keirin,cycling-track,Cycling Track,CTR,https://olympics.com/en/paris-2024/sports/cycling-track,Vélodrome National / Velodrome,48.78801,2.03496,Vélodrome National / Velodrome
+Women's Team Pursuit,cycling-track,Cycling Track,CTR,https://olympics.com/en/paris-2024/sports/cycling-track,Vélodrome National / Velodrome,48.78801,2.03496,Vélodrome National / Velodrome
+Women's Omnium,cycling-track,Cycling Track,CTR,https://olympics.com/en/paris-2024/sports/cycling-track,Vélodrome National / Velodrome,48.78801,2.03496,Vélodrome National / Velodrome
+Women's Madison,cycling-track,Cycling Track,CTR,https://olympics.com/en/paris-2024/sports/cycling-track,Vélodrome National / Velodrome,48.78801,2.03496,Vélodrome National / Velodrome
+Women's 3m Springboard,diving,Diving,DIV,https://olympics.com/en/paris-2024/sports/diving,Centre Aquatique Olympique Métropole du Grand Paris (Diving),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Women's 10m Platform,diving,Diving,DIV,https://olympics.com/en/paris-2024/sports/diving,Centre Aquatique Olympique Métropole du Grand Paris (Diving),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Women's Synchronised 3m Springboard,diving,Diving,DIV,https://olympics.com/en/paris-2024/sports/diving,Centre Aquatique Olympique Métropole du Grand Paris (Diving),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Women's Synchronised 10m Platform,diving,Diving,DIV,https://olympics.com/en/paris-2024/sports/diving,Centre Aquatique Olympique Métropole du Grand Paris (Diving),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Men's 3m Springboard,diving,Diving,DIV,https://olympics.com/en/paris-2024/sports/diving,Centre Aquatique Olympique Métropole du Grand Paris (Diving),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Men's 10m Platform,diving,Diving,DIV,https://olympics.com/en/paris-2024/sports/diving,Centre Aquatique Olympique Métropole du Grand Paris (Diving),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Men's Synchronised 3m Springboard,diving,Diving,DIV,https://olympics.com/en/paris-2024/sports/diving,Centre Aquatique Olympique Métropole du Grand Paris (Diving),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Men's Synchronised 10m Platform,diving,Diving,DIV,https://olympics.com/en/paris-2024/sports/diving,Centre Aquatique Olympique Métropole du Grand Paris (Diving),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Eventing Team,equestrian,Equestrian,EQU,https://olympics.com/en/paris-2024/sports/equestrian,Palace of Versailles (Equestrian),48.804722,2.121782,Palace of Versailles
+Eventing Individual,equestrian,Equestrian,EQU,https://olympics.com/en/paris-2024/sports/equestrian,Palace of Versailles (Equestrian),48.804722,2.121782,Palace of Versailles
+Dressage Team,equestrian,Equestrian,EQU,https://olympics.com/en/paris-2024/sports/equestrian,Palace of Versailles (Equestrian),48.804722,2.121782,Palace of Versailles
+Dressage Individual,equestrian,Equestrian,EQU,https://olympics.com/en/paris-2024/sports/equestrian,Palace of Versailles (Equestrian),48.804722,2.121782,Palace of Versailles
+Jumping Team,equestrian,Equestrian,EQU,https://olympics.com/en/paris-2024/sports/equestrian,Palace of Versailles (Equestrian),48.804722,2.121782,Palace of Versailles
+Jumping Individual,equestrian,Equestrian,EQU,https://olympics.com/en/paris-2024/sports/equestrian,Palace of Versailles (Equestrian),48.804722,2.121782,Palace of Versailles
+Women's Épée Individual,fencing,Fencing,FEN,https://olympics.com/en/paris-2024/sports/fencing,Grand Palais,48.8661614,2.3122229,Grand Palais
+Women's Foil Individual,fencing,Fencing,FEN,https://olympics.com/en/paris-2024/sports/fencing,Grand Palais,48.8661614,2.3122229,Grand Palais
+Women's Sabre Individual,fencing,Fencing,FEN,https://olympics.com/en/paris-2024/sports/fencing,Grand Palais,48.8661614,2.3122229,Grand Palais
+Men's Épée Individual,fencing,Fencing,FEN,https://olympics.com/en/paris-2024/sports/fencing,Grand Palais,48.8661614,2.3122229,Grand Palais
+Men's Foil Individual,fencing,Fencing,FEN,https://olympics.com/en/paris-2024/sports/fencing,Grand Palais,48.8661614,2.3122229,Grand Palais
+Men's Sabre Individual,fencing,Fencing,FEN,https://olympics.com/en/paris-2024/sports/fencing,Grand Palais,48.8661614,2.3122229,Grand Palais
+Women's Épée Team,fencing,Fencing,FEN,https://olympics.com/en/paris-2024/sports/fencing,Grand Palais,48.8661614,2.3122229,Grand Palais
+Women's Foil Team,fencing,Fencing,FEN,https://olympics.com/en/paris-2024/sports/fencing,Grand Palais,48.8661614,2.3122229,Grand Palais
+Women's Sabre Team,fencing,Fencing,FEN,https://olympics.com/en/paris-2024/sports/fencing,Grand Palais,48.8661614,2.3122229,Grand Palais
+Men's Épée Team,fencing,Fencing,FEN,https://olympics.com/en/paris-2024/sports/fencing,Grand Palais,48.8661614,2.3122229,Grand Palais
+Men's Foil Team,fencing,Fencing,FEN,https://olympics.com/en/paris-2024/sports/fencing,Grand Palais,48.8661614,2.3122229,Grand Palais
+Men's Sabre Team,fencing,Fencing,FEN,https://olympics.com/en/paris-2024/sports/fencing,Grand Palais,48.8661614,2.3122229,Grand Palais
+Men,football,Football,FBL,https://olympics.com/en/paris-2024/sports/football,Several Locations,,,Several Locations
+Women,football,Football,FBL,https://olympics.com/en/paris-2024/sports/football,Several Locations,,,Several Locations
+Men's Individual Stroke Play,golf,Golf,GLF,https://olympics.com/en/paris-2024/sports/golf,Golf National ,48.7532,2.0755,Goolf National
+Women's Individual Stroke Play,golf,Golf,GLF,https://olympics.com/en/paris-2024/sports/golf,Golf National ,48.7532,2.0755,Goolf National
+Men,handball,Handball,HBL,https://olympics.com/en/paris-2024/sports/handball,Porte de Versailles,48.8324338,2.2879537,Porte de Versailles
+Women,handball,Handball,HBL,https://olympics.com/en/paris-2024/sports/handball,Porte de Versailles,48.8324338,2.2879537,Porte de Versailles
+Men,hockey,Hockey,HOC,https://olympics.com/en/paris-2024/sports/hockey,Yves du Manoir Stadium (Hockey),49.1832,-0.3613,Yves du Manoir Stadium
+Women,hockey,Hockey,HOC,https://olympics.com/en/paris-2024/sports/hockey,Yves du Manoir Stadium (Hockey),49.1832,-0.3613,Yves du Manoir Stadium
+Women -48 kg,judo,Judo,JUD,https://olympics.com/en/paris-2024/sports/judo,Champ de Mars (Judo),48.8561446,2.2978204,Champ de Mars
+Women -52 kg,judo,Judo,JUD,https://olympics.com/en/paris-2024/sports/judo,Champ de Mars (Judo),48.8561446,2.2978204,Champ de Mars
+Women -57 kg,judo,Judo,JUD,https://olympics.com/en/paris-2024/sports/judo,Champ de Mars (Judo),48.8561446,2.2978204,Champ de Mars
+Women -63 kg,judo,Judo,JUD,https://olympics.com/en/paris-2024/sports/judo,Champ de Mars (Judo),48.8561446,2.2978204,Champ de Mars
+Women -70 kg,judo,Judo,JUD,https://olympics.com/en/paris-2024/sports/judo,Champ de Mars (Judo),48.8561446,2.2978204,Champ de Mars
+Women -78 kg,judo,Judo,JUD,https://olympics.com/en/paris-2024/sports/judo,Champ de Mars (Judo),48.8561446,2.2978204,Champ de Mars
+Women +78 kg,judo,Judo,JUD,https://olympics.com/en/paris-2024/sports/judo,Champ de Mars (Judo),48.8561446,2.2978204,Champ de Mars
+Men -60 kg,judo,Judo,JUD,https://olympics.com/en/paris-2024/sports/judo,Champ de Mars (Judo),48.8561446,2.2978204,Champ de Mars
+Men -66 kg,judo,Judo,JUD,https://olympics.com/en/paris-2024/sports/judo,Champ de Mars (Judo),48.8561446,2.2978204,Champ de Mars
+Men -73 kg,judo,Judo,JUD,https://olympics.com/en/paris-2024/sports/judo,Champ de Mars (Judo),48.8561446,2.2978204,Champ de Mars
+Men -81 kg,judo,Judo,JUD,https://olympics.com/en/paris-2024/sports/judo,Champ de Mars (Judo),48.8561446,2.2978204,Champ de Mars
+Men -90 kg,judo,Judo,JUD,https://olympics.com/en/paris-2024/sports/judo,Champ de Mars (Judo),48.8561446,2.2978204,Champ de Mars
+Men -100 kg,judo,Judo,JUD,https://olympics.com/en/paris-2024/sports/judo,Champ de Mars (Judo),48.8561446,2.2978204,Champ de Mars
+Men +100 kg,judo,Judo,JUD,https://olympics.com/en/paris-2024/sports/judo,Champ de Mars (Judo),48.8561446,2.2978204,Champ de Mars
+Mixed Team,judo,Judo,JUD,https://olympics.com/en/paris-2024/sports/judo,Champ de Mars (Judo),48.8561446,2.2978204,Champ de Mars
+Women's 10km,marathon-swimming,Marathon Swimming,OWS,https://olympics.com/en/paris-2024/sports/marathon-swimming,Seine River,48.8525768,2.3578407,Seine River
+Men's 10km,marathon-swimming,Marathon Swimming,OWS,https://olympics.com/en/paris-2024/sports/marathon-swimming,Seine River,48.8525768,2.3578407,Seine River
+Women's Individual,modern-pentathlon,Modern Pentathlon,MPN,https://olympics.com/en/paris-2024/sports/modern-pentathlon,Several Locations,,,Several Locations
+Men's Individual,modern-pentathlon,Modern Pentathlon,MPN,https://olympics.com/en/paris-2024/sports/modern-pentathlon,Several Locations,,,Several Locations
+Individual All-Around,rhythmic-gymnastics,Rhythmic Gymnastics,GRY,https://olympics.com/en/paris-2024/sports/rhythmic-gymnastics,Porte de la Chapelle,48.8977035,2.3594563,Porte de la Chapelle
+Group All-Around,rhythmic-gymnastics,Rhythmic Gymnastics,GRY,https://olympics.com/en/paris-2024/sports/rhythmic-gymnastics,Porte de la Chapelle,48.8977035,2.3594563,Porte de la Chapelle
+Women's Pair,rowing,Rowing,ROW,https://olympics.com/en/paris-2024/sports/rowing,Vaires-sur-Marne (Rowing)48.52001,2.39,Vaires-sur-Marne
+Men's Pair,rowing,Rowing,ROW,https://olympics.com/en/paris-2024/sports/rowing,Vaires-sur-Marne (Rowing)48.52001,2.39,Vaires-sur-Marne
+Women's Double Sculls,rowing,Rowing,ROW,https://olympics.com/en/paris-2024/sports/rowing,Vaires-sur-Marne (Rowing)48.52001,2.39,Vaires-sur-Marne
+Men's Double Sculls,rowing,Rowing,ROW,https://olympics.com/en/paris-2024/sports/rowing,Vaires-sur-Marne (Rowing)48.52001,2.39,Vaires-sur-Marne
+Women's Four,rowing,Rowing,ROW,https://olympics.com/en/paris-2024/sports/rowing,Vaires-sur-Marne (Rowing)48.52001,2.39,Vaires-sur-Marne
+Men's Four,rowing,Rowing,ROW,https://olympics.com/en/paris-2024/sports/rowing,Vaires-sur-Marne (Rowing)48.52001,2.39,Vaires-sur-Marne
+Women's Single Sculls,rowing,Rowing,ROW,https://olympics.com/en/paris-2024/sports/rowing,Vaires-sur-Marne (Rowing)48.52001,2.39,Vaires-sur-Marne
+Men's Single Sculls,rowing,Rowing,ROW,https://olympics.com/en/paris-2024/sports/rowing,Vaires-sur-Marne (Rowing)48.52001,2.39,Vaires-sur-Marne
+Lightweight Women's Double Sculls,rowing,Rowing,ROW,https://olympics.com/en/paris-2024/sports/rowing,Vaires-sur-Marne (Rowing)48.52001,2.39,Vaires-sur-Marne
+Lightweight Men's Double Sculls,rowing,Rowing,ROW,https://olympics.com/en/paris-2024/sports/rowing,Vaires-sur-Marne (Rowing)48.52001,2.39,Vaires-sur-Marne
+Women's Quadruple Sculls,rowing,Rowing,ROW,https://olympics.com/en/paris-2024/sports/rowing,Vaires-sur-Marne (Rowing)48.52001,2.39,Vaires-sur-Marne
+Men's Quadruple Sculls,rowing,Rowing,ROW,https://olympics.com/en/paris-2024/sports/rowing,Vaires-sur-Marne (Rowing)48.52001,2.39,Vaires-sur-Marne
+Women's Eight,rowing,Rowing,ROW,https://olympics.com/en/paris-2024/sports/rowing,Vaires-sur-Marne (Rowing)48.52001,2.39,Vaires-sur-Marne
+Men's Eight,rowing,Rowing,ROW,https://olympics.com/en/paris-2024/sports/rowing,Vaires-sur-Marne (Rowing)48.52001,2.39,Vaires-sur-Marne
+Men,rugby-sevens,Rugby Sevens,RU7,https://olympics.com/en/paris-2024/sports/rugby-sevens,Stade de France,48.8557562,2.3535027,Stade de France
+Women,rugby-sevens,Rugby Sevens,RU7,https://olympics.com/en/paris-2024/sports/rugby-sevens,Stade de France,48.8557562,2.3535027,Stade de France
+Men's Windsurfing,sailing,Sailing,SAL,https://olympics.com/en/paris-2024/sports/sailing,Marseille (Sailing),48.8642313,2.3212492,Marseille
+Men's Kite,sailing,Sailing,SAL,https://olympics.com/en/paris-2024/sports/sailing,Marseille (Sailing),48.8642313,2.3212492,Marseille
+Men's Dinghy,sailing,Sailing,SAL,https://olympics.com/en/paris-2024/sports/sailing,Marseille (Sailing),48.8642313,2.3212492,Marseille
+Men's Skiff,sailing,Sailing,SAL,https://olympics.com/en/paris-2024/sports/sailing,Marseille (Sailing),48.8642313,2.3212492,Marseille
+Women's Windsurfing,sailing,Sailing,SAL,https://olympics.com/en/paris-2024/sports/sailing,Marseille (Sailing),48.8642313,2.3212492,Marseille
+Women's Kite,sailing,Sailing,SAL,https://olympics.com/en/paris-2024/sports/sailing,Marseille (Sailing),48.8642313,2.3212492,Marseille
+Women's Dinghy,sailing,Sailing,SAL,https://olympics.com/en/paris-2024/sports/sailing,Marseille (Sailing),48.8642313,2.3212492,Marseille
+Women's Skiff,sailing,Sailing,SAL,https://olympics.com/en/paris-2024/sports/sailing,Marseille (Sailing),48.8642313,2.3212492,Marseille
+Mixed Dinghy,sailing,Sailing,SAL,https://olympics.com/en/paris-2024/sports/sailing,Marseille (Sailing),48.8642313,2.3212492,Marseille
+Mixed Multihull,sailing,Sailing,SAL,https://olympics.com/en/paris-2024/sports/sailing,Marseille (Sailing),48.8642313,2.3212492,Marseille
+10m Air Rifle Men,shooting,Shooting,SHO,https://olympics.com/en/paris-2024/sports/shooting,Châteauroux (Shooting venues),46.810299,1.691100,Châteauroux
+50m Rifle 3 Positions Men,shooting,Shooting,SHO,https://olympics.com/en/paris-2024/sports/shooting,Châteauroux (Shooting venues),46.810299,1.691100,Châteauroux
+10m Air Pistol Men,shooting,Shooting,SHO,https://olympics.com/en/paris-2024/sports/shooting,Châteauroux (Shooting venues),46.810299,1.691100,Châteauroux
+25m Rapid Fire Pistol Men,shooting,Shooting,SHO,https://olympics.com/en/paris-2024/sports/shooting,Châteauroux (Shooting venues),46.810299,1.691100,Châteauroux
+Trap Men,shooting,Shooting,SHO,https://olympics.com/en/paris-2024/sports/shooting,Châteauroux (Shooting venues),46.810299,1.691100,Châteauroux
+Skeet Men,shooting,Shooting,SHO,https://olympics.com/en/paris-2024/sports/shooting,Châteauroux (Shooting venues),46.810299,1.691100,Châteauroux
+10m Air Rifle Women,shooting,Shooting,SHO,https://olympics.com/en/paris-2024/sports/shooting,Châteauroux (Shooting venues),46.810299,1.691100,Châteauroux
+50m Rifle 3 Positions Women,shooting,Shooting,SHO,https://olympics.com/en/paris-2024/sports/shooting,Châteauroux (Shooting venues),46.810299,1.691100,Châteauroux
+10m Air Pistol Women,shooting,Shooting,SHO,https://olympics.com/en/paris-2024/sports/shooting,Châteauroux (Shooting venues),46.810299,1.691100,Châteauroux
+25m Pistol Women,shooting,Shooting,SHO,https://olympics.com/en/paris-2024/sports/shooting,Châteauroux (Shooting venues),46.810299,1.691100,Châteauroux
+Trap Women,shooting,Shooting,SHO,https://olympics.com/en/paris-2024/sports/shooting,Châteauroux (Shooting venues),46.810299,1.691100,Châteauroux
+Skeet Women,shooting,Shooting,SHO,https://olympics.com/en/paris-2024/sports/shooting,Châteauroux (Shooting venues),46.810299,1.691100,Châteauroux
+10m Air Rifle Mixed Team,shooting,Shooting,SHO,https://olympics.com/en/paris-2024/sports/shooting,Châteauroux (Shooting venues),46.810299,1.691100,Châteauroux
+10m Air Pistol Mixed Team,shooting,Shooting,SHO,https://olympics.com/en/paris-2024/sports/shooting,Châteauroux (Shooting venues),46.810299,1.691100,Châteauroux
+Skeet Mixed Team,shooting,Shooting,SHO,https://olympics.com/en/paris-2024/sports/shooting,Châteauroux (Shooting venues),46.810299,1.691100,Châteauroux
+Women's Street,skateboarding,Skateboarding,SKB,https://olympics.com/en/paris-2024/sports/skateboarding,Place de la Concorde / Skatepark (Skateboarding),48.865608,2.321038,Place de la Concorde / Skatepark
+Men's Street,skateboarding,Skateboarding,SKB,https://olympics.com/en/paris-2024/sports/skateboarding,Place de la Concorde / Skatepark (Skateboarding),48.865608,2.321038,Place de la Concorde / Skatepark
+Women's Park,skateboarding,Skateboarding,SKB,https://olympics.com/en/paris-2024/sports/skateboarding,Place de la Concorde / Skatepark (Skateboarding),48.865608,2.321038,Place de la Concorde / Skatepark
+Men's Park,skateboarding,Skateboarding,SKB,https://olympics.com/en/paris-2024/sports/skateboarding,Place de la Concorde / Skatepark (Skateboarding),48.865608,2.321038,Place de la Concorde / Skatepark
+Women's Boulder & Lead,sport-climbing,Sport Climbing,CLB,https://olympics.com/en/paris-2024/sports/sport-climbing,Le Bourget (Climbing),48.9303879,2.4232468,Le Bourget
+Women's Speed,sport-climbing,Sport Climbing,CLB,https://olympics.com/en/paris-2024/sports/sport-climbing,Le Bourget (Climbing),48.9303879,2.4232468,Le Bourget
+Men's Boulder & Lead,sport-climbing,Sport Climbing,CLB,https://olympics.com/en/paris-2024/sports/sport-climbing,Le Bourget (Climbing),48.9303879,2.4232468,Le Bourget
+Men's Speed,sport-climbing,Sport Climbing,CLB,https://olympics.com/en/paris-2024/sports/sport-climbing,Le Bourget (Climbing),48.9303879,2.4232468,Le Bourget
+Men,surfing,Surfing,SRF,https://olympics.com/en/paris-2024/sports/surfing,Teahupo'o,-17.846,-149.2671,Teahupo'o
+Women,surfing,Surfing,SRF,https://olympics.com/en/paris-2024/sports/surfing,Teahupo'o,-17.846,-149.2671,Teahupo'o
+Women's 50m Freestyle,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Women's 100m Freestyle,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Women's 200m Freestyle,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Women's 400m Freestyle,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Women's 800m Freestyle,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Women's 1500m Freestyle,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Women's 100m Backstroke,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Women's 200m Backstroke,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Women's 100m Breaststroke,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Women's 200m Breaststroke,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Women's 100m Butterfly,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Women's 200m Butterfly,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Women's 200m Individual Medley,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Women's 400m Individual Medley,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Women's 4 x 100m Freestyle Relay,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Women's 4 x 200m Freestyle Relay,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Women's 4 x 100m Medley Relay,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Men's 50m Freestyle,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Men's 100m Freestyle,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Men's 200m Freestyle,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Men's 400m Freestyle,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Men's 800m Freestyle,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Men's 1500m Freestyle,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Men's 100m Backstroke,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Men's 200m Backstroke,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Men's 100m Breaststroke,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Men's 200m Breaststroke,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Men's 100m Butterfly,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Men's 200m Butterfly,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Men's 200m Individual Medley,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Men's 400m Individual Medley,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Men's 4 x 100m Freestyle Relay,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Men's 4 x 200m Freestyle Relay,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Men's 4 x 100m Medley Relay,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Mixed 4 x 100m Medley Relay,swimming,Swimming,SWM,https://olympics.com/en/paris-2024/sports/swimming,Centre Aquatique Olympique Métropole du Grand Paris (Swimming),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Men's Singles,table-tennis,Table Tennis,TTE,https://olympics.com/en/paris-2024/sports/table-tennis,Porte de Versailles (Table Tennis),48.8324338,2.2879537,Porte de Versailles
+Women's Singles,table-tennis,Table Tennis,TTE,https://olympics.com/en/paris-2024/sports/table-tennis,Porte de Versailles (Table Tennis),48.8324338,2.2879537,Porte de Versailles
+Mixed Doubles,table-tennis,Table Tennis,TTE,https://olympics.com/en/paris-2024/sports/table-tennis,Porte de Versailles (Table Tennis),48.8324338,2.2879537,Porte de Versailles
+Men's Team,table-tennis,Table Tennis,TTE,https://olympics.com/en/paris-2024/sports/table-tennis,Porte de Versailles (Table Tennis),48.8324338,2.2879537,Porte de Versailles
+Women's Team,table-tennis,Table Tennis,TTE,https://olympics.com/en/paris-2024/sports/table-tennis,Porte de Versailles (Table Tennis),48.8324338,2.2879537,Porte de Versailles
+Men -58kg,taekwondo,Taekwondo,TKW,https://olympics.com/en/paris-2024/sports/taekwondo,Grand Palais (Taekwondo),48.8661614,2.3122229,Grand Palais
+Men -68kg,taekwondo,Taekwondo,TKW,https://olympics.com/en/paris-2024/sports/taekwondo,Grand Palais (Taekwondo),48.8661614,2.3122229,Grand Palais
+Men -80kg,taekwondo,Taekwondo,TKW,https://olympics.com/en/paris-2024/sports/taekwondo,Grand Palais (Taekwondo),48.8661614,2.3122229,Grand Palais
+Men +80kg,taekwondo,Taekwondo,TKW,https://olympics.com/en/paris-2024/sports/taekwondo,Grand Palais (Taekwondo),48.8661614,2.3122229,Grand Palais
+Women -49kg,taekwondo,Taekwondo,TKW,https://olympics.com/en/paris-2024/sports/taekwondo,Grand Palais (Taekwondo),48.8661614,2.3122229,Grand Palais
+Women -57kg,taekwondo,Taekwondo,TKW,https://olympics.com/en/paris-2024/sports/taekwondo,Grand Palais (Taekwondo),48.8661614,2.3122229,Grand Palais
+Women -67kg,taekwondo,Taekwondo,TKW,https://olympics.com/en/paris-2024/sports/taekwondo,Grand Palais (Taekwondo),48.8661614,2.3122229,Grand Palais
+Women +67kg,taekwondo,Taekwondo,TKW,https://olympics.com/en/paris-2024/sports/taekwondo,Grand Palais (Taekwondo),48.8661614,2.3122229,Grand Palais
+Men's Singles,tennis,Tennis,TEN,https://olympics.com/en/paris-2024/sports/tennis,Stade Roland-Garros (Tennis),48.846869,2.2484179,Stade Roland-Garros
+Women's Singles,tennis,Tennis,TEN,https://olympics.com/en/paris-2024/sports/tennis,Stade Roland-Garros (Tennis),48.846869,2.2484179,Stade Roland-Garros
+Men's Doubles,tennis,Tennis,TEN,https://olympics.com/en/paris-2024/sports/tennis,Stade Roland-Garros (Tennis),48.846869,2.2484179,Stade Roland-Garros
+Women's Doubles,tennis,Tennis,TEN,https://olympics.com/en/paris-2024/sports/tennis,Stade Roland-Garros (Tennis),48.846869,2.2484179,Stade Roland-Garros
+Mixed Doubles,tennis,Tennis,TEN,https://olympics.com/en/paris-2024/sports/tennis,Stade Roland-Garros (Tennis),48.846869,2.2484179,Stade Roland-Garros
+Men,trampoline-gymnastics,Trampoline Gymnastics,GTR,https://olympics.com/en/paris-2024/sports/trampoline-gymnastics,Accor Arena,48.8387085,2.3787666,Accor Arena
+Women,trampoline-gymnastics,Trampoline Gymnastics,GTR,https://olympics.com/en/paris-2024/sports/trampoline-gymnastics,Accor Arena,48.8387085,2.3787666,Accor Arena
+Women's Individual,triathlon,Triathlon,TRI,https://olympics.com/en/paris-2024/sports/triathlon,Seine & Paris city routes (Triathlon),,,Seine & Paris city routes
+Men's Individual,triathlon,Triathlon,TRI,https://olympics.com/en/paris-2024/sports/triathlon,Seine & Paris city routes (Triathlon),,,Seine & Paris city routes
+Mixed Relay,triathlon,Triathlon,TRI,https://olympics.com/en/paris-2024/sports/triathlon,Seine & Paris city routes (Triathlon),,,Seine & Paris city routes
+Men,volleyball,Volleyball,VVO,https://olympics.com/en/paris-2024/sports/volleyball,Porte de Versailles (Volleyball),48.8324338,2.2879537,Porte de Versailles
+Women,volleyball,Volleyball,VVO,https://olympics.com/en/paris-2024/sports/volleyball,Porte de Versailles (Volleyball),48.8324338,2.2879537,Porte de Versailles
+Men,water-polo,Water Polo,WPO,https://olympics.com/en/paris-2024/sports/water-polo,Centre Aquatique Olympique Métropole du Grand Paris (Water Polo),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Women,water-polo,Water Polo,WPO,https://olympics.com/en/paris-2024/sports/water-polo,Centre Aquatique Olympique Métropole du Grand Paris (Water Polo),48.9236,2.3553,Centre Aquatique Olympique Métropole du Grand Paris
+Women's 49kg,weightlifting,Weightlifting,WLF,https://olympics.com/en/paris-2024/sports/weightlifting,Porte de Versailles (Weightlifting),48.8324338,2.2879537,Porte de Versailles
+Women's 59kg,weightlifting,Weightlifting,WLF,https://olympics.com/en/paris-2024/sports/weightlifting,Porte de Versailles (Weightlifting),48.8324338,2.2879537,Porte de Versailles
+Women's 71kg,weightlifting,Weightlifting,WLF,https://olympics.com/en/paris-2024/sports/weightlifting,Porte de Versailles (Weightlifting),48.8324338,2.2879537,Porte de Versailles
+Women's 81kg,weightlifting,Weightlifting,WLF,https://olympics.com/en/paris-2024/sports/weightlifting,Porte de Versailles (Weightlifting),48.8324338,2.2879537,Porte de Versailles
+Women's +81kg,weightlifting,Weightlifting,WLF,https://olympics.com/en/paris-2024/sports/weightlifting,Porte de Versailles (Weightlifting),48.8324338,2.2879537,Porte de Versailles
+Men's 61kg,weightlifting,Weightlifting,WLF,https://olympics.com/en/paris-2024/sports/weightlifting,Porte de Versailles (Weightlifting),48.8324338,2.2879537,Porte de Versailles
+Men's 73kg,weightlifting,Weightlifting,WLF,https://olympics.com/en/paris-2024/sports/weightlifting,Porte de Versailles (Weightlifting),48.8324338,2.2879537,Porte de Versailles
+Men's 89kg,weightlifting,Weightlifting,WLF,https://olympics.com/en/paris-2024/sports/weightlifting,Porte de Versailles (Weightlifting),48.8324338,2.2879537,Porte de Versailles
+Men's 102kg,weightlifting,Weightlifting,WLF,https://olympics.com/en/paris-2024/sports/weightlifting,Porte de Versailles (Weightlifting),48.8324338,2.2879537,Porte de Versailles
+Men's +102kg,weightlifting,Weightlifting,WLF,https://olympics.com/en/paris-2024/sports/weightlifting,Porte de Versailles (Weightlifting),48.8324338,2.2879537,Porte de Versailles
+Men's Greco-Roman 60kg,wrestling,Wrestling,WRE,https://olympics.com/en/paris-2024/sports/wrestling,Champ de Mars,48.8561446,2.2978204,Champ de Mars
+Men's Greco-Roman 67kg,wrestling,Wrestling,WRE,https://olympics.com/en/paris-2024/sports/wrestling,Champ de Mars,48.8561446,2.2978204,Champ de Mars
+Men's Greco-Roman 77kg,wrestling,Wrestling,WRE,https://olympics.com/en/paris-2024/sports/wrestling,Champ de Mars,48.8561446,2.2978204,Champ de Mars
+Men's Greco-Roman 87kg,wrestling,Wrestling,WRE,https://olympics.com/en/paris-2024/sports/wrestling,Champ de Mars,48.8561446,2.2978204,Champ de Mars
+Men's Greco-Roman 97kg,wrestling,Wrestling,WRE,https://olympics.com/en/paris-2024/sports/wrestling,Champ de Mars,48.8561446,2.2978204,Champ de Mars
+Men's Greco-Roman 130kg,wrestling,Wrestling,WRE,https://olympics.com/en/paris-2024/sports/wrestling,Champ de Mars ,48.8561446,2.2978204,Champ de Mars
+Women's Freestyle 50kg,wrestling,Wrestling,WRE,https://olympics.com/en/paris-2024/sports/wrestling,Champ de Mars ,48.8561446,2.2978204,Champ de Mars
+Women's Freestyle 53kg,wrestling,Wrestling,WRE,https://olympics.com/en/paris-2024/sports/wrestling,Champ de Mars ,48.8561446,2.2978204,Champ de Mars
+Women's Freestyle 57kg,wrestling,Wrestling,WRE,https://olympics.com/en/paris-2024/sports/wrestling,Champ de Mars ,48.8561446,2.2978204,Champ de Mars
+Women's Freestyle 62kg,wrestling,Wrestling,WRE,https://olympics.com/en/paris-2024/sports/wrestling,Champ de Mars ,48.8561446,2.2978204,Champ de Mars
+Women's Freestyle 68kg,wrestling,Wrestling,WRE,https://olympics.com/en/paris-2024/sports/wrestling,Champ de Mars ,48.8561446,2.2978204,Champ de Mars
+Women's Freestyle 76kg,wrestling,Wrestling,WRE,https://olympics.com/en/paris-2024/sports/wrestling,Champ de Mars ,48.8561446,2.2978204,Champ de Mars
+Men's Freestyle 57kg,wrestling,Wrestling,WRE,https://olympics.com/en/paris-2024/sports/wrestling,Champ de Mars  Arena,48.85611,2.29833,Champ de Mars  Arena
+Men's Freestyle 65kg,wrestling,Wrestling,WRE,https://olympics.com/en/paris-2024/sports/wrestling,Champ de Mars  Arena,48.85611,2.29833,Champ de Mars  Arena
+Men's Freestyle 74kg,wrestling,Wrestling,WRE,https://olympics.com/en/paris-2024/sports/wrestling,Champ de Mars  Arena,48.85611,2.29833,Champ de Mars  Arena
+Men's Freestyle 86kg,wrestling,Wrestling,WRE,https://olympics.com/en/paris-2024/sports/wrestling,Champ de Mars  Arena,48.85611,2.29833,Champ de Mars  Arena
+Men's Freestyle 97kg,wrestling,Wrestling,WRE,https://olympics.com/en/paris-2024/sports/wrestling,Champ de Mars  Arena,48.85611,2.29833,Champ de Mars  Arena
+Men's Freestyle 125kg,wrestling,Wrestling,WRE,https://olympics.com/en/paris-2024/sports/wrestling,Champ de Mars  Arena,48.85611,2.29833,Champ de Mars  Arena

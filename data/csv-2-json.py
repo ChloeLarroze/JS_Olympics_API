@@ -10,7 +10,7 @@ json_file_path =  "/Users/chloelarroze/doc/S9/Projet_JS/data/dataset_json"
 def csv_to_json():
     #csv 
     athletes_df = pd.read_csv(f'{csv_file_path}/athletes.csv')
-    events_df = pd.read_csv(f'{csv_file_path}/events.csv')
+    events_df = pd.read_csv(f'{csv_file_path}/events_with_coords.csv')
     medals_df = pd.read_csv(f'{csv_file_path}/medals.csv')
 
     #ATHLETES   
