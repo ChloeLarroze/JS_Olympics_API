@@ -66,7 +66,6 @@ L’objectif est de manipuler des données issues des Jeux Olympiques d’été 
 └── tsconfig.json
 ```
 
-
 ## Quickstart
 
 ### Prérequis
@@ -116,14 +115,58 @@ Le dataset utilisé provient de [Paris 2024 Olympic Summer Games Dataset](https:
 Il fournit des informations complètes sur les Jeux Olympiques d’été 2024 : athlètes, disciplines, événements, pays participants, et médailles. 
 
 Nous utiliserons notamment les tables: 
-| Fichier        | Description                                                          |
-|----------------|----------------------------------------------------------------------|
-| `athletes.csv` | Informations personnelles sur les athlètes (nom, âge, pays, sport, etc.) |
-| `events.csv`   | Détails sur les épreuves (sport, date, lieu, participants, etc.)         |
-| `medals.csv`   | Détenteurs de médailles (athlète, pays, épreuve, type de médaille)        |
+| Fichier          | Description                                                                 | Taille             |
+|------------------|------------------------------------------------------------------------------|----------------------|
+| `athletes.csv`   | Informations personnelles sur les athlètes (nom, âge, pays, sport, etc.)       | 11 113 athlètes       |
+| `events.csv`     | Détails sur les épreuves (discipline, type, lieu, participants, etc.)          | 329 épreuves          |
+| `medals.csv`     | Détenteurs de médailles (athlète, pays, épreuve, type de médaille)              | 1 044 médailles        |
 
-### Modèles de données JSON générés
+Pour enrichir notre contexte, nous pourrons par exemple imaginer des statistiques, comme montré dans le graphe qui suit: 
+<div align="center">
+    <img src="./.pics/graph_country.png" alt="country_graph" width="400px"/>
+    <p><em>Figure : Répartition du nombre d'athlètes par pays</em></p>
+</div>
 
+
+#### Modèles de données JSON générés
+À partir de ces fichiers CSV, nous avons ainsi généré des fichiers JSON dans le but de pouvoir utiliser ces données plus facilement (à la fois en terme de lecture que de rapidité d'accès depuis les endpoints). Nous avons pour cela utilisé le programme `csv-2-json.py` présent à titre anecdotique dans le repo. 
+Les csv comportent de nombreuses informations que nous ne souhaitons pas forcément exploiter pour l'exemple de notre API. Par exemple, `athlete.csv` adopte la structure suivante: 
+
+|code   |current|name          |name_short|name_tv       |gender|function|country_code|country|country_long|nationality|nationality_long|nationality_code|height|weight|disciplines  |events                    |birth_date|birth_place|birth_country|residence_place|residence_country|nickname|hobbies|occupation|education|family|lang    |coach|reason|hero|influence|philosophy                                                                              |sporting_relatives                                                                                          |ritual|other_sports|
+|-------|-------|--------------|----------|--------------|------|--------|------------|-------|------------|-----------|----------------|----------------|------|------|-------------|--------------------------|----------|-----------|-------------|---------------|-----------------|--------|-------|----------|---------|------|--------|-----|------|----|---------|----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|------|------------|
+|1532873|True   |AMOYAN Malkhas|AMOYAN M  |Malkhas AMOYAN|Male  |Athlete |ARM         |Armenia|Armenia     |Armenia    |Armenia         |ARM             |0.0   |0.0   |['Wrestling']|["Men's Greco-Roman 77kg"]|1999-01-22|YEREVAN    |Armenia      |YEREVAN        |Armenia          |        |       |          |         |      |Armenian|     |      |    |         |"To become a good athlete, you first have to be a good person." (ankakh.com, 6 Oct 2018)|Uncle, Roman Amoyan (wrestling), 2008 Olympic bronze medallist and two-time European champion in Greco-Roman|      |            |
+
+Nous n'exploiterons cependant pas toutes ces données dans notre API mais ces dernières sont toujours ajoutables. De la même manière, nous structurerons les données de `events` dans la structure suivante. 
+
+```json
+{
+      "event": "Men's Individual",
+      "tag": "archery",
+      "sport": {
+        "name": "Archery",
+        "code": "ARC",
+        "url": "https://olympics.com/en/paris-2024/sports/archery"
+      },
+      "discipline": "Archery",
+      "event_type": "Individual",
+      "url_event": "/events/arc/men's-individual",
+      "locations": [
+        {
+          "venue": "Esplanade des Invalides",
+          "lat": 48.8584337,
+          "lng": 2.3138998
+        }
+      ]
+    }
+```
+
+#### Qualité de la donnée, remarques et problèmes
+Comme dans tous les datasets, une petite phase de nettoyage a été nécessaire avant la conversion en JSON et la pleine exploitation des données. Nous avons pu observer : 
+- une présence de valeurs `NaN` à de nombreux endroits, il faudra les remplacer par des `null`pour la fonction de parsage. 
+- dans les genres des athlètes: les équipes mixtes sont marquées comme 'X'. Il faudra y faire attention lors de l'exploitation, par exemple du nombre de médailles remportées par des hommes par tel pays, etc. 
+- certains events ou athlètes n'apparaissent pas dans la liste des médailles 
+- Ex. Gregoria Mariska TUNJUNG a un type "Bronze Medal" mais pas de medal_code (devrait être 3) (l.471 de medals.csv)
+ 
 
 <!-- --- -->
 
