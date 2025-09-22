@@ -5,7 +5,7 @@ import { AppModule } from './app.module';
 //import * as dotenv from 'dotenv';
 //dotenv.config();
 
-const PORT = process.env.PORT ?? 3000;
+const PORT = 8080;
 
 async function bootstrap() {
 
