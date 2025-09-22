@@ -2,12 +2,15 @@ import { Event } from './Events';
 import { OnModuleInit } from '@nestjs/common';
 export declare class EventsService implements OnModuleInit {
     private eventsById;
-    constructor();
+    private favorites;
     onModuleInit(): Promise<void>;
+    private normalizeId;
+    private idFromEvent;
     private loadEventsFromFile;
     EventfindAll(country?: string): Promise<Event[]>;
     EventfindOne(id: string): Promise<Event>;
     createEvent(event: Event): Promise<Event>;
     deleteEvent(id: string): Promise<void>;
     favoriteEvent(id: string): Promise<Event>;
+    getAllIds(): Promise<string[]>;
 }

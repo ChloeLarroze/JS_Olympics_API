@@ -38,9 +38,6 @@ var __importStar = (this && this.__importStar) || (function () {
         return result;
     };
 })();
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.EventsService = void 0;
 const common_1 = require("@nestjs/common");
@@ -49,19 +46,55 @@ const path = __importStar(require("path"));
 let EventsService = class EventsService {
     constructor() {
         this.eventsById = new Map();
+        this.favorites = new Set();
     }
     async onModuleInit() {
         await this.loadEventsFromFile('./data/dataset_json/events.json');
     }
+    normalizeId(id) {
+        return id
+            .toLowerCase()
+            .replace(/\s+/g, '-')
+            .replace(/'/g, '');
+    }
+    idFromEvent(e) {
+        return this.normalizeId(`${e.event}-${e.tag}`);
+    }
     async loadEventsFromFile(filePath) {
         try {
             const fullPath = path.resolve(filePath);
+            console.log('Trying to load from path:', fullPath);
+            if (!fs.existsSync(fullPath)) {
+                throw new Error(`File does not exist: ${fullPath}`);
+            }
             const data = fs.readFileSync(fullPath, 'utf-8');
+            console.log('Raw file data length:', data.length);
+            console.log('First 200 characters:', data.substring(0, 200));
             const parsedData = JSON.parse(data);
-            const events = Array.isArray(parsedData) ? parsedData : [parsedData];
-            events.forEach((event) => {
-                this.eventsById.set(event.event, event);
+            console.log('Parsed data type:', typeof parsedData);
+            console.log('Is array?', Array.isArray(parsedData));
+            let events = [];
+            if (Array.isArray(parsedData)) {
+                events = parsedData;
+            }
+            else if (parsedData.events && Array.isArray(parsedData.events)) {
+                events = parsedData.events;
+            }
+            else {
+                events = [parsedData];
+            }
+            console.log('Total events to process:', events.length);
+            if (events.length > 0) {
+                console.log('First event structure:', JSON.stringify(events[0], null, 2));
+            }
+            events.forEach((event, index) => {
+                console.log(`Processing event ${index}: event="${event.event}", tag="${event.tag}"`);
+                const id = this.idFromEvent(event);
+                console.log(`Generated ID: "${id}"`);
+                this.eventsById.set(id, event);
             });
+            console.log('Final map size:', this.eventsById.size);
+            console.log('Final map keys:', Array.from(this.eventsById.keys()));
         }
         catch (error) {
             console.error('Error loading events from file:', error);
@@ -72,35 +105,59 @@ let EventsService = class EventsService {
         return Array.from(this.eventsById.values());
     }
     async EventfindOne(id) {
-        const event = this.eventsById.get(id);
-        if (!event)
-            throw new Error('Event not found');
-        return event;
+        try {
+            console.log(`Raw ID received: "${id}"`);
+            const normalizedId = this.normalizeId(id);
+            console.log(`Normalized ID: "${normalizedId}"`);
+            console.log(`Available IDs: ${Array.from(this.eventsById.keys()).slice(0, 5).join(', ')}...`);
+            const event = this.eventsById.get(normalizedId);
+            if (!event)
+                throw new Error(`Event with ID "${id}" not found`);
+            return event;
+        }
+        catch (error) {
+            console.error('Error in EventfindOne:', error);
+            throw error;
+        }
     }
     async createEvent(event) {
-        if (this.eventsById.has(event.event)) {
+        if (this.eventsById.has(this.idFromEvent(event))) {
             throw new Error('Event with this ID already exists');
         }
-        this.eventsById.set(event.event, event);
+        this.eventsById.set(this.idFromEvent(event), event);
         return event;
     }
     async deleteEvent(id) {
-        if (!this.eventsById.has(id)) {
+        const normalizedId = this.normalizeId(id);
+        if (!this.eventsById.has(normalizedId)) {
             throw new Error('Event with this ID does not exist');
         }
-        this.eventsById.delete(id);
+        this.eventsById.delete(normalizedId);
     }
     async favoriteEvent(id) {
-        const event = this.eventsById.get(id);
-        if (!event) {
-            throw new Error('Event with this ID does not exist');
+        try {
+            console.log(`Raw ID received for favorite: "${id}"`);
+            const normalizedId = this.normalizeId(id);
+            console.log(`Normalized ID for favorite: "${normalizedId}"`);
+            const event = this.eventsById.get(normalizedId);
+            if (!event) {
+                throw new Error(`Event with ID "${id}" doesn't exist`);
+            }
+            this.favorites.add(normalizedId);
+            console.log(`Successfully added to favorites: ${normalizedId}`);
+            return event;
         }
-        return event;
+        catch (error) {
+            console.error('Error in favoriteEvent:', error);
+            throw error;
+        }
+    }
+    async getAllIds() {
+        return Array.from(this.eventsById.keys());
     }
 };
 exports.EventsService = EventsService;
 exports.EventsService = EventsService = __decorate([
-    (0, common_1.Injectable)(),
-    __metadata("design:paramtypes", [])
+    (0, common_1.Injectable)()
 ], EventsService);
 //# sourceMappingURL=events.service.js.map

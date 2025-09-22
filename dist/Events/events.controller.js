@@ -31,6 +31,12 @@ let EventsController = class EventsController {
     async deleteEvent(id) {
         return this.eventsService.deleteEvent(id);
     }
+    async favoriteEvent(id) {
+        return this.eventsService.favoriteEvent(id);
+    }
+    async listAllIds() {
+        return this.eventsService.getAllIds();
+    }
 };
 exports.EventsController = EventsController;
 __decorate([
@@ -61,6 +67,19 @@ __decorate([
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], EventsController.prototype, "deleteEvent", null);
+__decorate([
+    (0, common_1.Post)('favorite/:id'),
+    __param(0, (0, common_1.Param)('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
+], EventsController.prototype, "favoriteEvent", null);
+__decorate([
+    (0, common_1.Get)('debug/list-ids'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
+], EventsController.prototype, "listAllIds", null);
 exports.EventsController = EventsController = __decorate([
     (0, common_1.Controller)('events'),
     __metadata("design:paramtypes", [events_service_1.EventsService])

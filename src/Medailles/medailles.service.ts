@@ -29,7 +29,7 @@ export class MedaillesService implements OnModuleInit {
         }
 
         medailles.forEach((medaille, index) => {
-            this.medailles.set(`${medaille.athlete.code}-${index}`, medaille);
+            this.medailles.set(`${medaille.athlete.code}`, medaille); //${medaille.athlete.code}-${index}`
         });
     }
 
@@ -42,6 +42,7 @@ export class MedaillesService implements OnModuleInit {
         return Array.from(this.medailles.values());
     }
 
+    //returns a single medal by its id (athlete code + index) CTRMSPRTEAM3AUS01 --> id = CTRMSPRTEAM3AUS01-0
     async MedaillefindOne(id: string): Promise<Medaille> {
         const medaille = this.medailles.get(id);
         if (!medaille) throw new NotFoundException('Medaille not found');

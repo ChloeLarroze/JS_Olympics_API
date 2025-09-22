@@ -61,7 +61,7 @@ let MedaillesService = class MedaillesService {
             throw new Error("The expected medals array was not found in the JSON file.");
         }
         medailles.forEach((medaille, index) => {
-            this.medailles.set(`${medaille.athlete.code}-${index}`, medaille);
+            this.medailles.set(`${medaille.athlete.code}`, medaille);
         });
     }
     async MedaillefindAll(country) {

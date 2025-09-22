@@ -7,4 +7,6 @@ export declare class EventsController {
     EventfindOne(id: string): Promise<Event>;
     createEvent(event: Event): Promise<Event>;
     deleteEvent(id: string): Promise<void>;
+    favoriteEvent(id: string): Promise<Event>;
+    listAllIds(): Promise<string[]>;
 }

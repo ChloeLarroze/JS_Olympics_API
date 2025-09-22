@@ -14,7 +14,8 @@ export class MedaillesController {
         return this.medaillesService.MedaillefindAll();
     }
     
-     //returns countries ranked by total medals (gold, silver, bronze) -- GET /medals/rankings?sortBy=total|gold|silver|bronze
+     //returns countries ranked by total medals (gold, silver, bronze) -- 
+     //Postman request example: http://localhost:3000/medals/rankings?sortBy=gold
     @Get('rankings')
     async getMedalRankings(
         @Query('sortBy') sortBy: 'total' | 'gold' | 'silver' | 'bronze' = 'total'
@@ -22,7 +23,8 @@ export class MedaillesController {
         return this.medaillesService.getMedalRankings(sortBy);
     }
 
-    //single medal by id (athlete code + index)
+    //single medal by id (athlete code)
+    //postman request example: http://localhost:3000/medals/CTRMSPRTEAM3AUS01
     @Get(':id')
     async getMedailleById(@Param('id') id: string): Promise<Medaille> {
         return this.medaillesService.MedaillefindOne(id);
@@ -35,6 +37,7 @@ export class MedaillesController {
     }
     
     //delete a medal by id
+    //postman request example: http://localhost:3000/medals/CTRMSPRTEAM3AUS01
     @Delete(':id')
     async deleteMedaille(@Param('id') id: string): Promise<void> {
         return this.medaillesService.deleteMedaille(id);

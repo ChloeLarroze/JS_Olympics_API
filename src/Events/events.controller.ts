@@ -19,6 +19,7 @@ export class EventsController {
     return this.eventsService.EventfindAll(country);
   }
 
+  //postman request eg : http://localhost:3000/events/Women's Individual-archery
   @Get(':id')
   async EventfindOne(@Param('id') id: string): Promise<Event> {
     return this.eventsService.EventfindOne(id);
@@ -33,4 +34,17 @@ export class EventsController {
   async deleteEvent(@Param('id') id: string): Promise<void> {
     return this.eventsService.deleteEvent(id);
   }
+
+  //put a certain event as a favorite
+  // postman eg : http://localhost:3000/events/favorite/Women's Individual-archery
+  @Post('favorite/:id')
+  async favoriteEvent(@Param('id') id: string): Promise<Event> {
+    return this.eventsService.favoriteEvent(id);
+  }
+
+  //debug
+  @Get('debug/list-ids')
+  async listAllIds(): Promise<string[]> {
+    return this.eventsService.getAllIds(); //we'll need to add this method to the service
+}
 }
