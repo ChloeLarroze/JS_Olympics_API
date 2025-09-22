@@ -171,15 +171,25 @@ Comme dans tous les datasets, une petite phase de nettoyage a été nécessaire 
 <!-- --- -->
 
 ## API 
-JSON, methods, details
+### Architecture générale
+L’API développée suit l’architecture *RESTful*, ce qui signifie que chaque ressource (athlètes, événements, médailles, favoris) est accessible via une URL unique et manipulée grâce aux méthodes standard du protocole HTTP. On pourra notamment citer les principales:
+- GET : lecture d’une ou plusieurs ressources
+- POST : création d’une nouvelle ressource
+- PUT / PATCH : mise à jour partielle ou complète d’une ressource
+- DELETE : suppression d’une ressource
+
+Toutes les données échangées entre le client et le serveur transitent au format JSON, format relativement léger mais surtout très largement utilisé pour les API. Chaque requête reçoit en retour une réponse "structurée" contenant les informations demandées ou un message de statut (succès, erreur, etc.). Le projet est construit avec NestJS, qui repose sur une architecture modulaire. En effet, le **AppModule** encapsule les trois modules principaux (`Athletes`, `Events`, `Medals`) ainsi que le module `Favorites`.Dans chaque module, on retrouve un Controller (responsable de définir les routes/endpoints) et un Service (chargé de l'implémentation de la logique (comme la recherche, la création ou la suppression de données, etc)), illustré dans le schéma suivant : 
 
 <div align="center">
     <img src="./.pics/schema.png" alt="Beach-volley Paris 2024" width="400px"/>
     <p><em>Figure 2 : Schéma API</em></p>
-</div>
+</div>/
 
-### Endpoints
-#### Athlètes (/athletes)
+<!-- TODO : check for figure numbering -->
+
+### Liste des endpoints
+#### Athlètes (/athletes) 
+<!-- TODO  -->
 GET /athletes - Liste tous les athlètes
 GET /athletes/:id - Détails d'un athlète
 PUT /athletes/:id - Mettre à jour un athlète (favori)
@@ -187,18 +197,52 @@ POST /athletes - Créer un athlète
 GET /athletes/search?q=... - Recherche d'athlètes
 
 #### Événements (/events)
-GET /events - Liste tous les événements
-GET /events/:id - Détails d'un événement
-PUT /events/:id - Mettre à jour un événement (favori)
-POST /events - Créer un événement
-GET /events/search?q=... - Recherche d'événements
+- GET /events : liste tous les événements (avec possibilité de filtrer par pays via ?country=...).
+- GET /events/:id : détail d’un événement spécifique.
+- POST /events : création d’un nouvel événement.
+- DELETE /events/:id : suppression d’un événement.
+- POST /events/favorite/:id : met un événement en favori.
+- GET /events/debug/list-ids : endpoint de debug listant les identifiants disponibles.
 
 #### Médailles (/medals)
-GET /medals - Classement des médailles par pays
-GET /medals/:country - Médailles d'un pays spécifique
+- GET /medals : liste l’ensemble des médailles.
+- GET /medals/rankings?sortBy=... : retourne le classement des pays selon un critère (total, gold, silver, bronze).
+- GET /medals/:id : détail d’une médaille identifiée par son ID (souvent lié au code d’un athlète).
+- POST /medals : création d’une nouvelle médaille.
+- DELETE /medals/:id : suppression d’une médaille existante.
 
-#### Recherche globale (/search)
-GET /search?q=... - Recherche across toutes les données
+<!-- #### Recherche globale (/search) TODO ? 
+GET /search?q=... - Recherche across toutes les données -->
+
+### Exemple de réponse JSON
+
+Pour la requête suivante : 
+```vbnet
+GET /events/Women's Individual-archery
+```
+On s'attend à recevoir : 
+
+```json
+{
+    "event": "Women's Individual",
+    "tag": "archery",
+    "sport": {
+        "name": "Archery",
+        "code": "ARC",
+        "url": "https://olympics.com/en/paris-2024/sports/archery"
+    },
+    "discipline": "Archery",
+    "event_type": "Individual",
+    "url_event": "/events/arc/women's-individual",
+    "locations": [
+        {
+            "venue": "Esplanade des Invalides",
+            "lat": 48.8584337,
+            "lng": 2.3138998
+        }
+    ]
+}
+```
 
 ### Configuration
 #### Variables d'environnement
@@ -211,6 +255,10 @@ GET /search?q=... - Recherche across toutes les données
 ## Tests
 ### Structure des tests
 ### Exécution des tests
+
+#### Postman 
+[Workspace Postman JO Paris 2024](https://joparis2024.postman.co/workspace/JO_Paris2024-Workspace~b3d123fe-cfd9-46a1-85b7-b215b58cba47/collection/46131293-f678c346-5ec0-457d-8687-e63590c39d2f?action=share&creator=46131293)
+
 ### Couverture de code
 
 
