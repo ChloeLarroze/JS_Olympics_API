@@ -178,12 +178,12 @@ L’API développée suit l’architecture *RESTful*, ce qui signifie que chaque
 - PUT / PATCH : mise à jour partielle ou complète d’une ressource
 - DELETE : suppression d’une ressource
 
-Toutes les données échangées entre le client et le serveur transitent au format JSON, format relativement léger mais surtout très largement utilisé pour les API. Chaque requête reçoit en retour une réponse "structurée" contenant les informations demandées ou un message de statut (succès, erreur, etc.). Le projet est construit avec NestJS, qui repose sur une architecture modulaire. En effet, le **AppModule** encapsule les trois modules principaux (`Athletes`, `Events`, `Medals`) ainsi que le module `Favorites`.Dans chaque module, on retrouve un Controller (responsable de définir les routes/endpoints) et un Service (chargé de l'implémentation de la logique (comme la recherche, la création ou la suppression de données, etc)), illustré dans le schéma suivant : 
+Toutes les données échangées entre le client et le serveur transitent au format JSON, format relativement léger mais surtout très largement utilisé pour les API. Chaque requête reçoit en retour une réponse "structurée" contenant les informations demandées ou un message de statut (succès, erreur, etc.). Le projet est construit avec NestJS, qui repose sur une architecture modulaire. En effet, le **AppModule** encapsule les trois modules principaux (`Athletes`, `Events`, `Medals`) ainsi que le module `Favorites`. Dans chaque module, on retrouve un Controller (responsable de définir les routes/endpoints) et un Service (chargé de l'implémentation de la logique (comme la recherche, la création ou la suppression de données, etc)), illustré dans le schéma suivant : 
 
 <div align="center">
     <img src="./.pics/schema.png" alt="Beach-volley Paris 2024" width="400px"/>
     <p><em>Figure 2 : Schéma API</em></p>
-</div>/
+</div>
 
 <!-- TODO : check for figure numbering -->
 
@@ -249,26 +249,128 @@ On s'attend à recevoir :
 #### Configuration de la base de données
 #### Configuration des CORS
 #### Gestion des erreurs
+NestJS centralise les exceptions grâce au système d’Exception Filters.
+Dans notre implémentation actuelle :
+- Une erreur de logique (throw new Error('Event not found')) est renvoyée comme une 500 Internal Server Error.
+- Si notre API est lancée en prod, il serait préférable d’utiliser les classes natives (NotFoundException, BadRequestException) pour obtenir des statuts d'erreurs plus précis (404, 400, etc.).
 
 <!-- --- -->
 
 ## Tests
-### Structure des tests
-### Exécution des tests
+### Structure et exécution des tests
+Les tests sont organisés en deux catégories principales :
 
-#### Postman 
-[Workspace Postman JO Paris 2024](https://joparis2024.postman.co/workspace/JO_Paris2024-Workspace~b3d123fe-cfd9-46a1-85b7-b215b58cba47/collection/46131293-f678c346-5ec0-457d-8687-e63590c39d2f?action=share&creator=46131293)
+- Tests unitaires : validation isolée de la logique métier (services).
+- Tests d’intégration (aka e2e) : vérification des contrôleurs et de la chaîne complète requête → réponse, à l’aide de Supertest et du framework de test de NestJS. On retrouvera l'arborescence suivante: 
+```bash
+/test
+  ├── events.e2e-spec.ts
+  ├── medals.e2e-spec.ts
+  └── athlete.e2e-spec.ts
+```
+Par ailleurs, les tests sont exécutés via Jest (par défaut avec NestJS) :
+```bash
+npm run test         #execution des tests unitaires
+npm run test:e2e     #exécution des tests end2end
+npm run test:cov     #execution avec la couverture
+```
 
 ### Couverture de code
+La couverture de code est générée automatiquement avec Jest (commande ci-dessus) et peut être consultée dans le dossier /coverage, ici non inclus dans le repo. Cette dernière permet de visualiser les parties de nos code couvertes par des tests et celles qui nécessitent encore de nouveaux scénarios.
+
+```zsh
+----------------------------|---------|----------|---------|---------|------------------------
+File                        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s      
+----------------------------|---------|----------|---------|---------|------------------------
+All files                   |   19.13 |     6.79 |   22.44 |   19.59 |                        
+ dist                       |       0 |        0 |       0 |       0 |                        
+  app.module.d.ts           |       0 |        0 |       0 |       0 |                        
+  app.module.js             |       0 |        0 |       0 |       0 | 2-17                   
+  main.d.ts                 |       0 |        0 |       0 |       0 |                        
+  main.js                   |       0 |        0 |       0 |       0 | 3-12                   
+ dist/Athlete               |       0 |        0 |       0 |       0 |                        
+  Athlete.d.ts              |       0 |        0 |       0 |       0 |                        
+  Athlete.js                |       0 |      100 |     100 |       0 | 2                      
+  athlete.controller.d.ts   |       0 |        0 |       0 |       0 |                        
+  athlete.controller.js     |       0 |        0 |       0 |       0 | 2-53                   
+  athlete.module.d.ts       |       0 |        0 |       0 |       0 |                        
+  athlete.module.js         |       0 |        0 |       0 |       0 | 2-18                   
+  athlete.service.d.ts      |       0 |        0 |       0 |       0 |                        
+  athlete.service.js        |       0 |        0 |       0 |       0 | 2-52                   
+  brouillo,.d.ts            |       0 |        0 |       0 |       0 |                        
+  brouillo,.js              |       0 |        0 |       0 |       0 |                        
+  favorite.controller.d.ts  |       0 |        0 |       0 |       0 |                        
+  favorite.controller.js    |       0 |        0 |       0 |       0 | 2-67                   
+  favorite.module.d.ts      |       0 |        0 |       0 |       0 |                        
+  favorite.module.js        |       0 |        0 |       0 |       0 | 2-16                   
+  favorite.service.d.ts     |       0 |        0 |       0 |       0 |                        
+  favorite.service.js       |       0 |        0 |       0 |       0 | 2-57                   
+ dist/Events                |       0 |        0 |       0 |       0 |                        
+  Events.d.ts               |       0 |        0 |       0 |       0 |                        
+  Events.js                 |       0 |      100 |     100 |       0 | 2                      
+  events.controller.d.ts    |       0 |        0 |       0 |       0 |                        
+  events.controller.js      |       0 |        0 |       0 |       0 | 2-83                   
+  events.module.d.ts        |       0 |        0 |       0 |       0 |                        
+  events.module.js          |       0 |        0 |       0 |       0 | 2-16                   
+  events.service.d.ts       |       0 |        0 |       0 |       0 |                        
+  events.service.js         |       0 |        0 |       0 |       0 | 2-147                  
+ dist/Medailles             |       0 |        0 |       0 |       0 |                        
+  Medaille.d.ts             |       0 |        0 |       0 |       0 |                        
+  Medaille.js               |       0 |      100 |     100 |       0 | 2                      
+  medailles.controller.d.ts |       0 |        0 |       0 |       0 |                        
+  medailles.controller.js   |       0 |        0 |       0 |       0 | 2-73                   
+  medailles.module.d.ts     |       0 |        0 |       0 |       0 |                        
+  medailles.module.js       |       0 |        0 |       0 |       0 | 2-16                   
+  medailles.service.d.ts    |       0 |        0 |       0 |       0 |                        
+  medailles.service.js      |       0 |        0 |       0 |       0 | 2-173                  
+ src                        |       0 |        0 |       0 |       0 |                        
+  app.module.ts             |       0 |      100 |     100 |       0 | 3-13                   
+  main.ts                   |       0 |        0 |       0 |       0 | 1-16                   
+ src/Athlete                |   47.61 |    61.11 |   66.66 |   48.35 |                        
+  athlete.controller.ts     |       0 |      100 |       0 |       0 | 1-21                   
+  athlete.module.ts         |       0 |      100 |     100 |       0 | 1-11                   
+  athlete.service.ts        |   89.28 |       50 |    90.9 |      88 | 22,43,53               
+  favorite.controller.ts    |       0 |      100 |       0 |       0 | 1-37                   
+  favorite.module.ts        |       0 |      100 |     100 |       0 | 1-11                   
+  favorite.service.ts       |   89.28 |    66.66 |     100 |      88 | 17,39-40               
+ src/Events                 |   33.33 |        0 |   26.31 |   28.57 |                        
+  events.controller.ts      |   88.88 |      100 |   71.42 |    87.5 | 42,48                  
+  events.module.ts          |     100 |      100 |     100 |     100 |                        
+  events.service.ts         |      10 |        0 |       0 |    7.01 | 11-150                 
+ src/Medailles              |   82.72 |       75 |   72.41 |   83.15 |                        
+  medailles.controller.ts   |   81.25 |      100 |      50 |   78.57 | 30,36,43               
+  medailles.module.ts       |     100 |      100 |     100 |     100 |                        
+  medailles.service.ts      |   81.81 |    74.28 |   78.26 |   83.11 | 28,38-39,47-49,144-158 
+----------------------------|---------|----------|---------|---------|------------------------
+
+Test Suites: 3 passed, 3 total
+Tests:       25 passed, 25 total
+Snapshots:   0 total
+Time:        16.573 s
+```
+
+#### Postman 
 
 
-<!-- --- -->
+Nous avons également créé un workspace Postman pour tester manuellement notre API et partager les collections de requêtes  [Workspace Postman JO Paris 2024](https://joparis2024.postman.co/workspace/JO_Paris2024-Workspace~b3d123fe-cfd9-46a1-85b7-b215b58cba47/collection/46131293-f678c346-5ec0-457d-8687-e63590c39d2f?action=share&creator=46131293). Il regroupe notamment les appels aux différents endpoints (/events, /athletes, /favorites, /medals) avec paramètres, exemples de payloads JSON et scénarios de test.
+
+<div align="center">
+    <img src="./.pics/all_postman.png" alt="country_graph" width="400px"/>
+    <p><em>Figure : Collection Postman JO Paris 2024</em></p>
+</div>
+
+Par exemple, nous avons un test fonctionnel pour le endpoint `Medal`: 
+
+<div align="center">
+    <img src="./.pics/medal_postman_test.png" alt="country_graph" width="400px"/>
+    <p><em>Figure : Query Postman Medal</em></p>
+</div>
 
 ## Déploiement
 ### Configuration Clever Cloud
+L’application est déployée sur Clever Cloud, une plateforme PaaS qui simplifie l’hébergement des applications Node.js. La configuration inclut dans notre cas un lien automatique avec le dépôt GitHub pour déclencher les déploiements. Concernant le déploiement, un pipeline CI/CD (par exemple GitHub Actions) s'assure que les tests (aussi bien unitaires et e2e) passent avant le déploiement, que le build soit généré (npm run build). Enfin, si tout est vert, il déclenche le déploiement automatique.
 ### Variables d'environnement de production
-### Pipeline de déploiement continu
-### Monitoring et logs
+
 
 <!-- --- -->
 ## Exemples d'Utilisation
@@ -276,7 +378,18 @@ link btw our context and the material produced
 ### Requêtes API examples (avec curl et examples JSON)
 ### Réponses API examples
 ### Cas d'utilisation courants
+- Un utilisateur consulte la liste des événements disponibles et en ajoute certains en favoris.
+- Le comité de suivi accède au classement des médailles par pays, trié par nombre d’or.
+- L’application mobile affiche la liste des athlètes favoris d’un utilisateur, persistée via l’API.
 
+## Conclusion 
+
+Pistes d'amélioration 
+- couverture des tests
+- un front end un peu ? 
+- persistance des datas avec une connexion vers une DB
+- revoir le fichier .env pour y mettre dans ce cas là des trucs vrmt utils (genre les credentials de la DB)
+- d'autres endpoints un peu plsu chiadés comme pour le ranking des médailles 
 
 <!-- 
 description: "NEST JS API deployment project based on Paris 2024 Olympics dataset @ Mines St-Étienne"
