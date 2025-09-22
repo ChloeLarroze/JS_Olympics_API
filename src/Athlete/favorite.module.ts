@@ -4,7 +4,7 @@ import { FavoriteController } from './favorite.controller';
 import { AthleteService } from './athlete.service';
 
 @Module({
-    providers: [FavoriteService, AthleteService],
+    providers: [FavoriteService],
     controllers: [FavoriteController],
     exports: [FavoriteService],
 })

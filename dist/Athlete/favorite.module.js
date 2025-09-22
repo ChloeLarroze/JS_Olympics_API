@@ -10,13 +10,12 @@ exports.FavoriteModule = void 0;
 const common_1 = require("@nestjs/common");
 const favorite_service_1 = require("./favorite.service");
 const favorite_controller_1 = require("./favorite.controller");
-const athlete_service_1 = require("./athlete.service");
 let FavoriteModule = class FavoriteModule {
 };
 exports.FavoriteModule = FavoriteModule;
 exports.FavoriteModule = FavoriteModule = __decorate([
     (0, common_1.Module)({
-        providers: [favorite_service_1.FavoriteService, athlete_service_1.AthleteService],
+        providers: [favorite_service_1.FavoriteService],
         controllers: [favorite_controller_1.FavoriteController],
         exports: [favorite_service_1.FavoriteService],
     })

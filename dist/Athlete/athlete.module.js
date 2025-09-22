@@ -10,13 +10,15 @@ exports.AthleteModule = void 0;
 const common_1 = require("@nestjs/common");
 const athlete_controller_1 = require("./athlete.controller");
 const athlete_service_1 = require("./athlete.service");
+const favorite_service_1 = require("./favorite.service");
+const favorite_controller_1 = require("./favorite.controller");
 let AthleteModule = class AthleteModule {
 };
 exports.AthleteModule = AthleteModule;
 exports.AthleteModule = AthleteModule = __decorate([
     (0, common_1.Module)({
-        controllers: [athlete_controller_1.AthleteController],
-        providers: [athlete_service_1.AthleteService],
+        controllers: [athlete_controller_1.AthleteController, favorite_controller_1.FavoriteController],
+        providers: [athlete_service_1.AthleteService, favorite_service_1.FavoriteService],
     })
 ], AthleteModule);
 //# sourceMappingURL=athlete.module.js.map

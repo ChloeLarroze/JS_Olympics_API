@@ -1,13 +1,15 @@
 import { FavoriteService } from './favorite.service';
+import { AthleteService } from './athlete.service';
 import { Athlete } from './Athlete';
 export declare class FavoriteController {
     private readonly favoriteService;
-    constructor(favoriteService: FavoriteService);
-    addFavorite(athleteId: number, userId: number): {
+    private readonly athleteService;
+    constructor(favoriteService: FavoriteService, athleteService: AthleteService);
+    addFavorite(athleteId: string, userId: string): {
         message: string;
     };
-    removeFavorite(athleteId: number, userId: number): {
+    removeFavorite(athleteId: string, userId: string): {
         message: string;
     };
-    getFavorites(userId: number): Athlete[];
+    getFavorites(userId: string): Athlete[];
 }

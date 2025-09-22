@@ -9,6 +9,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AthleteService = void 0;
 const promises_1 = require("node:fs/promises");
 const common_1 = require("@nestjs/common");
+const common_2 = require("@nestjs/common");
 let AthleteService = class AthleteService {
     constructor() {
         this.storage = new Map();
@@ -35,11 +36,13 @@ let AthleteService = class AthleteService {
     getAthleteByCode(code) {
         const athlete = this.storage.get(code);
         if (!athlete) {
-            throw new Error(`Athlete with code ${code} not found`);
+            throw new common_2.NotFoundException(`Athlete with code ${code} not found`);
         }
         return athlete;
     }
     search(term) {
+        console.log('Recherche avec term =', term);
+        console.log('Storage =', Array.from(this.storage.values()));
         return Array.from(this.storage.values())
             .filter((athlete) => athlete.name.includes(term))
             .sort((a, b) => a.name.localeCompare(b.name));
