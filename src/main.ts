@@ -5,7 +5,7 @@ import { AppModule } from './app.module';
 //import * as dotenv from 'dotenv';
 //dotenv.config();
 
-const PORT =  8080; //move to .env file TODO
+const PORT =  3000 || process.env.PORT; //to use the port in .env file
 
 async function bootstrap() {
 

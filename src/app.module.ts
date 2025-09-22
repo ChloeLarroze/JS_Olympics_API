@@ -4,7 +4,7 @@ import { Module } from '@nestjs/common';
 import { EventsModule } from './Events/events.module';
 import { MedaillesModule } from './Medailles/medailles.module';
 import { AthleteModule } from './Athlete/athlete.module';
-import {FavoriteModule} from "./Athlete/favorite.module";
+
 
 
 @Module({
