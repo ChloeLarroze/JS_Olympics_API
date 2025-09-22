@@ -15,48 +15,58 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.FavoriteController = void 0;
 const common_1 = require("@nestjs/common");
 const favorite_service_1 = require("./favorite.service");
+const athlete_service_1 = require("./athlete.service");
 let FavoriteController = class FavoriteController {
-    constructor(favoriteService) {
+    constructor(favoriteService, athleteService) {
         this.favoriteService = favoriteService;
+        this.athleteService = athleteService;
     }
     addFavorite(athleteId, userId) {
-        this.favoriteService.addFavorite(userId, athleteId);
-        return { message: `Athlete ${athleteId} added to favorites for user ${userId}` };
+        const athleteIdNumber = Number(athleteId);
+        const userIdNumber = Number(userId);
+        const athlete = this.athleteService.getAthleteByCode(athleteIdNumber);
+        this.favoriteService.addFavorite(userIdNumber, athleteIdNumber);
+        return { message: `Athlete ${athleteIdNumber} added to favorites for user ${userIdNumber}` };
     }
     removeFavorite(athleteId, userId) {
-        this.favoriteService.removeFavorite(userId, athleteId);
-        return { message: `Athlete ${athleteId} removed from favorites for user ${userId}` };
+        const athleteIdNumber = Number(athleteId);
+        const userIdNumber = Number(userId);
+        this.favoriteService.removeFavorite(userIdNumber, athleteIdNumber);
+        return { message: `Athlete ${athleteIdNumber} removed from favorites for user ${userIdNumber}` };
     }
     getFavorites(userId) {
-        return this.favoriteService.getFavorites(userId);
+        const userIdNumber = Number(userId);
+        console.log('UserId for getFavorites:', userIdNumber);
+        return this.favoriteService.getFavorites(userIdNumber);
     }
 };
 exports.FavoriteController = FavoriteController;
 __decorate([
-    (0, common_1.Post)(':athleteId'),
+    (0, common_1.Post)('add/:athleteId'),
     __param(0, (0, common_1.Param)('athleteId')),
     __param(1, (0, common_1.Query)('user')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Number, Number]),
+    __metadata("design:paramtypes", [String, String]),
     __metadata("design:returntype", void 0)
 ], FavoriteController.prototype, "addFavorite", null);
 __decorate([
-    (0, common_1.Delete)(':athleteId'),
+    (0, common_1.Delete)('remove/:athleteId'),
     __param(0, (0, common_1.Param)('athleteId')),
     __param(1, (0, common_1.Query)('user')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Number, Number]),
+    __metadata("design:paramtypes", [String, String]),
     __metadata("design:returntype", void 0)
 ], FavoriteController.prototype, "removeFavorite", null);
 __decorate([
     (0, common_1.Get)(),
     __param(0, (0, common_1.Query)('user')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Number]),
+    __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Array)
 ], FavoriteController.prototype, "getFavorites", null);
 exports.FavoriteController = FavoriteController = __decorate([
     (0, common_1.Controller)('favorites'),
-    __metadata("design:paramtypes", [favorite_service_1.FavoriteService])
+    __metadata("design:paramtypes", [favorite_service_1.FavoriteService,
+        athlete_service_1.AthleteService])
 ], FavoriteController);
 //# sourceMappingURL=favorite.controller.js.map

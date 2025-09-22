@@ -1,6 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import { Injectable, OnModuleInit } from '@nestjs/common';
 import { Athlete, Country } from './Athlete';
+import { NotFoundException } from '@nestjs/common';
 
 @Injectable()
 export class AthleteService implements OnModuleInit {
@@ -21,7 +22,9 @@ export class AthleteService implements OnModuleInit {
             throw new Error('Invalid JSON format: expected an array of athletes');
         }
         athletes.forEach((athlete) => this.addAthlete(athlete));
+
     }
+
 
     addAthlete(athlete: Athlete) {
     this.storage.set(athlete.code, athlete);
@@ -37,12 +40,14 @@ export class AthleteService implements OnModuleInit {
         const athlete = this.storage.get(code);
 
         if (!athlete) {
-            throw new Error(`Athlete with code ${code} not found`);
+            throw new NotFoundException(`Athlete with code ${code} not found`);
         }
         return athlete;
     }
 
     search(term: string) {
+        console.log('Recherche avec term =', term);
+        console.log('Storage =', Array.from(this.storage.values()));
         return Array.from(this.storage.values())
             .filter((athlete) => athlete.name.includes(term))
             .sort((a, b) => a.name.localeCompare(b.name));

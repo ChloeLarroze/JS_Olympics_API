@@ -12,17 +12,23 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.FavoriteService = void 0;
 const common_1 = require("@nestjs/common");
 const athlete_service_1 = require("./athlete.service");
+const common_2 = require("@nestjs/common");
 let FavoriteService = class FavoriteService {
     constructor(athleteService) {
         this.athleteService = athleteService;
         this.favorites = new Map();
     }
     addFavorite(userId, athleteId) {
+        const athlete = this.athleteService.getAthleteByCode(athleteId);
+        if (!athlete) {
+            throw new common_2.NotFoundException(`coucou`);
+        }
         const favs = this.favorites.get(userId) || [];
         if (!favs.includes(athleteId)) {
             favs.push(athleteId);
             this.favorites.set(userId, favs);
         }
+        console.log('Favorites map:', this.favorites);
     }
     removeFavorite(userId, athleteId) {
         const favs = this.favorites.get(userId) || [];
@@ -31,7 +37,15 @@ let FavoriteService = class FavoriteService {
     getFavorites(userId) {
         const favIds = this.favorites.get(userId) || [];
         return favIds
-            .map(id => this.athleteService.getAthleteByCode(id))
+            .map(id => {
+            try {
+                return this.athleteService.getAthleteByCode(id);
+            }
+            catch (e) {
+                console.warn(`⚠️ Athlète ${id} non trouvé`);
+                return null;
+            }
+        })
             .filter((athlete) => !!athlete);
     }
     isFavorite(userId, athleteId) {
