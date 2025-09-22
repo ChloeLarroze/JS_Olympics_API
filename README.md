@@ -282,47 +282,7 @@ La couverture de code est générée automatiquement avec Jest (commande ci-dess
 ----------------------------|---------|----------|---------|---------|------------------------
 File                        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s      
 ----------------------------|---------|----------|---------|---------|------------------------
-All files                   |   19.13 |     6.79 |   22.44 |   19.59 |                        
- dist                       |       0 |        0 |       0 |       0 |                        
-  app.module.d.ts           |       0 |        0 |       0 |       0 |                        
-  app.module.js             |       0 |        0 |       0 |       0 | 2-17                   
-  main.d.ts                 |       0 |        0 |       0 |       0 |                        
-  main.js                   |       0 |        0 |       0 |       0 | 3-12                   
- dist/Athlete               |       0 |        0 |       0 |       0 |                        
-  Athlete.d.ts              |       0 |        0 |       0 |       0 |                        
-  Athlete.js                |       0 |      100 |     100 |       0 | 2                      
-  athlete.controller.d.ts   |       0 |        0 |       0 |       0 |                        
-  athlete.controller.js     |       0 |        0 |       0 |       0 | 2-53                   
-  athlete.module.d.ts       |       0 |        0 |       0 |       0 |                        
-  athlete.module.js         |       0 |        0 |       0 |       0 | 2-18                   
-  athlete.service.d.ts      |       0 |        0 |       0 |       0 |                        
-  athlete.service.js        |       0 |        0 |       0 |       0 | 2-52                   
-  brouillo,.d.ts            |       0 |        0 |       0 |       0 |                        
-  brouillo,.js              |       0 |        0 |       0 |       0 |                        
-  favorite.controller.d.ts  |       0 |        0 |       0 |       0 |                        
-  favorite.controller.js    |       0 |        0 |       0 |       0 | 2-67                   
-  favorite.module.d.ts      |       0 |        0 |       0 |       0 |                        
-  favorite.module.js        |       0 |        0 |       0 |       0 | 2-16                   
-  favorite.service.d.ts     |       0 |        0 |       0 |       0 |                        
-  favorite.service.js       |       0 |        0 |       0 |       0 | 2-57                   
- dist/Events                |       0 |        0 |       0 |       0 |                        
-  Events.d.ts               |       0 |        0 |       0 |       0 |                        
-  Events.js                 |       0 |      100 |     100 |       0 | 2                      
-  events.controller.d.ts    |       0 |        0 |       0 |       0 |                        
-  events.controller.js      |       0 |        0 |       0 |       0 | 2-83                   
-  events.module.d.ts        |       0 |        0 |       0 |       0 |                        
-  events.module.js          |       0 |        0 |       0 |       0 | 2-16                   
-  events.service.d.ts       |       0 |        0 |       0 |       0 |                        
-  events.service.js         |       0 |        0 |       0 |       0 | 2-147                  
- dist/Medailles             |       0 |        0 |       0 |       0 |                        
-  Medaille.d.ts             |       0 |        0 |       0 |       0 |                        
-  Medaille.js               |       0 |      100 |     100 |       0 | 2                      
-  medailles.controller.d.ts |       0 |        0 |       0 |       0 |                        
-  medailles.controller.js   |       0 |        0 |       0 |       0 | 2-73                   
-  medailles.module.d.ts     |       0 |        0 |       0 |       0 |                        
-  medailles.module.js       |       0 |        0 |       0 |       0 | 2-16                   
-  medailles.service.d.ts    |       0 |        0 |       0 |       0 |                        
-  medailles.service.js      |       0 |        0 |       0 |       0 | 2-173                  
+All files                   |   19.13 |     6.79 |   22.44 |   19.59 |                                    
  src                        |       0 |        0 |       0 |       0 |                        
   app.module.ts             |       0 |      100 |     100 |       0 | 3-13                   
   main.ts                   |       0 |        0 |       0 |       0 | 1-16                   
