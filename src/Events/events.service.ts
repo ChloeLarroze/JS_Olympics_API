@@ -41,12 +41,12 @@ export class EventsService implements OnModuleInit {
             }
             
             const data = fs.readFileSync(fullPath, 'utf-8');
-            console.log('Raw file data length:', data.length);
-            console.log('First 200 characters:', data.substring(0, 200));
+            // console.log('Raw file data length:', data.length);
+            // console.log('First 200 characters:', data.substring(0, 200));
             
             const parsedData = JSON.parse(data);
-            console.log('Parsed data type:', typeof parsedData);
-            console.log('Is array?', Array.isArray(parsedData));
+            // console.log('Parsed data type:', typeof parsedData);
+            // console.log('Is array?', Array.isArray(parsedData));
             
             // Handle the nested structure - events are under the "events" key
             let events: Event[] = [];
@@ -58,20 +58,20 @@ export class EventsService implements OnModuleInit {
                 events = [parsedData];
             }
             
-            console.log('Total events to process:', events.length);
+            //console.log('Total events to process:', events.length);
             if (events.length > 0) {
-                console.log('First event structure:', JSON.stringify(events[0], null, 2));
+                //console.log('First event structure:', JSON.stringify(events[0], null, 2));
             }
             
             events.forEach((event: Event, index: number) => {
-                console.log(`Processing event ${index}: event="${event.event}", tag="${event.tag}"`);
+                //console.log(`Processing event ${index}: event="${event.event}", tag="${event.tag}"`);
                 const id = this.idFromEvent(event);
-                console.log(`Generated ID: "${id}"`);
+                //console.log(`Generated ID: "${id}"`);
                 this.eventsById.set(id, event);
             });
             
-            console.log('Final map size:', this.eventsById.size);
-            console.log('Final map keys:', Array.from(this.eventsById.keys()));
+            // console.log('Final map size:', this.eventsById.size);
+            // console.log('Final map keys:', Array.from(this.eventsById.keys()));
             
         } catch (error) {
             console.error('Error loading events from file:', error);
@@ -90,10 +90,10 @@ export class EventsService implements OnModuleInit {
     //postman request eg : http://localhost:3000/events/Women's Individual-archery
     async EventfindOne(id: string): Promise<Event> {
         try {
-            console.log(`Raw ID received: "${id}"`);
+            //console.log(`Raw ID received: "${id}"`);
             const normalizedId = this.normalizeId(id);
-            console.log(`Normalized ID: "${normalizedId}"`);
-            console.log(`Available IDs: ${Array.from(this.eventsById.keys()).slice(0, 5).join(', ')}...`);
+            //console.log(`Normalized ID: "${normalizedId}"`);
+            //console.log(`Available IDs: ${Array.from(this.eventsById.keys()).slice(0, 5).join(', ')}...`);
             
             const event = this.eventsById.get(normalizedId);
             if (!event) throw new Error(`Event with ID "${id}" not found`);
