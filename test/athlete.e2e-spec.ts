@@ -16,7 +16,7 @@ describe('AthleteService (e2e)', () => {
         disciplines: ['sprint'],
         events: ['100m', '200m'],
         country: { code: 'JAM', name: 'Jamaica' },
-        Physical_attributes: { height: 195, weights: 94 }, // vérifie la clé exacte
+        Physical_attributes: { height: 195, weights: 94 }, // TODO 
     };
 
     const mockAthlete2: Athlete = {

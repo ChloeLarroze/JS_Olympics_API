@@ -54,12 +54,19 @@ let EventsService = class EventsService {
         await this.loadEventsFromFile('./data/dataset_json/events.json');
     }
     async loadEventsFromFile(filePath) {
-        const fullPath = path.resolve(filePath);
-        const data = fs.readFileSync(fullPath, 'utf-8');
-        const events = JSON.parse(data);
-        events.forEach((event) => {
-            this.eventsById.set(event.event, event);
-        });
+        try {
+            const fullPath = path.resolve(filePath);
+            const data = fs.readFileSync(fullPath, 'utf-8');
+            const parsedData = JSON.parse(data);
+            const events = Array.isArray(parsedData) ? parsedData : [parsedData];
+            events.forEach((event) => {
+                this.eventsById.set(event.event, event);
+            });
+        }
+        catch (error) {
+            console.error('Error loading events from file:', error);
+            throw error;
+        }
     }
     async EventfindAll(country) {
         return Array.from(this.eventsById.values());

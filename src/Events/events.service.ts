@@ -20,14 +20,32 @@ export class EventsService implements OnModuleInit {
         await this.loadEventsFromFile('./data/dataset_json/events.json');
     }    
     
-    private async loadEventsFromFile(filePath: string): Promise<void> {
-        const fullPath = path.resolve(filePath);
-        const data = fs.readFileSync(fullPath, 'utf-8');
-        const events: Event[] = JSON.parse(data); //obj table 
+    // private async loadEventsFromFile(filePath: string): Promise<void> {
+    //     const fullPath = path.resolve(filePath);
+    //     const data = fs.readFileSync(fullPath, 'utf-8');
+    //     const events: Event[] = JSON.parse(data); //obj table 
 
-        events.forEach((event) => {
-            this.eventsById.set(event.event, event); //use event name as id bc set(key, value)
-        });
+    //     events.forEach((event) => {
+    //         this.eventsById.set(event.event, event); //use event name as id bc set(key, value)
+    //     });
+    // }
+
+    private async loadEventsFromFile(filePath: string): Promise<void> {
+        try {
+            const fullPath = path.resolve(filePath);
+            const data = fs.readFileSync(fullPath, 'utf-8');
+            const parsedData = JSON.parse(data);
+            
+            // Ensure we always work with an array
+            const events: Event[] = Array.isArray(parsedData) ? parsedData : [parsedData];
+            
+            events.forEach((event: Event) => {
+                this.eventsById.set(event.event, event);
+            });
+        } catch (error) {
+            console.error('Error loading events from file:', error);
+            throw error;
+        }
     }
 
     //all events, filtered by country 
