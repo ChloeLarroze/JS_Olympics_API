@@ -335,6 +335,19 @@ L’application est déployée sur Clever Cloud, une plateforme PaaS qui simplif
 ### Variables d'environnement de production
 
 
+### Résultats 
+
+ <div style="display: flex; justify-content: space-around;">
+  <div style="text-align: center;">
+    <img src="./.pics/domain_names.png" alt="Description 1" width="400"/>
+    <p>Diffénts noms de domaines des endpoints</p>
+  </div>
+  <div style="text-align: center;">
+    <img src="./.pics/domain_working.png" alt="Description 2" width="400"/>
+    <p>Résultat dans un browser</p>
+  </div>
+</div>
+
 <!-- --- -->
 ## Exemples d'Utilisation
 link btw our context and the material produced 

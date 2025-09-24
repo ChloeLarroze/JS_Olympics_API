@@ -30,6 +30,7 @@ export interface Medaille {
     country: Country;
 }
 
+//interface for cntry medal ranking 
 export interface CountryMedalCount {
     country: {
         code: string;
@@ -46,7 +47,6 @@ export interface CountryMedalCount {
         total: number;
         male: number;
         female: number;
-        // Remove the 'other' property
     };
     topDisciplines: Array<{
         discipline: string;

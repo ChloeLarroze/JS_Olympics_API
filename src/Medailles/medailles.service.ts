@@ -100,12 +100,13 @@ export class MedaillesService implements OnModuleInit {
             // FIX:only count athletes with M or W gender for the total (not that i have anything against non-binary athletes,
             //  but there are mixed teams marked as 'X' which skews the stats) :/
             const validGenderedAthletes = Array.from(uniqueAthletes.values()).filter(a => 
-                a.gender === 'M' || a.gender === 'W' //fix : english dataset dummy so not F but W
+                a.gender === 'M' || a.gender === 'W'  //fix : english dataset dummy so not F but W
             );
 
             stats.athletes.total = validGenderedAthletes.length;
             stats.athletes.male = validGenderedAthletes.filter(a => a.gender === 'M').length;
             stats.athletes.female = validGenderedAthletes.filter(a => a.gender === 'W').length;
+            //stats.athletes.team = validGenderedAthletes.filter(a => a.gender === 'X').length; we'll ignore it cause i'm too lazy to add it 
 
             //top disciplines
             const disciplineCount = new Map<string, number>();
