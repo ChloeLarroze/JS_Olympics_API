@@ -42,16 +42,17 @@ export class MedaillesService implements OnModuleInit {
         return Array.from(this.medailles.values());
     }
 
-    //returns a single medal by its id (athlete code + index) CTRMSPRTEAM3AUS01 --> id = CTRMSPRTEAM3AUS01-0
+    //returns a single medal by its id (aka the athlete code) eg: CTRMSPRTEAM3AUS01 
     async MedaillefindOne(id: string): Promise<Medaille> {
         const medaille = this.medailles.get(id);
         if (!medaille) throw new NotFoundException('Medaille not found');
         return medaille;
     }
 
+    //returns countries ranked by total medals (gold, silver, bronze)
     async getMedalRankings(sortBy: 'total' | 'gold' | 'silver' | 'bronze' = 'total'): Promise<CountryMedalCount[]> {
         const allMedailles = Array.from(this.medailles.values());
-        const countryStats = new Map<string, CountryMedalCount>();
+        const countryStats = new Map<string, CountryMedalCount>(); // key: country code
 
         allMedailles.forEach((medaille) => {
             const countryCode = medaille.country.code;
@@ -59,6 +60,7 @@ export class MedaillesService implements OnModuleInit {
             if (!countryStats.has(countryCode)) {
                 countryStats.set(countryCode, {
                     country: medaille.country,
+                    //init 
                     medals: { gold: 0, silver: 0, bronze: 0, total: 0 },
                     athletes: { total: 0, male: 0, female: 0 },
                     topDisciplines: [],
@@ -67,14 +69,15 @@ export class MedaillesService implements OnModuleInit {
                 });
             }
 
+            //stats for current cntry
             const stats = countryStats.get(countryCode)!;
             
-            const medalType = this.normalizeMedalType(medaille.medal.type);
-            stats.medals[medalType]++;
-            stats.medals.total++;
+            const medalType = this.normalizeMedalType(medaille.medal.type);//fix type 
+            stats.medals[medalType]++; //increment gold/silver/bronze
+            stats.medals.total++; //increment total medals
 
             if (medaille.date < stats.firstMedalDate!) {
-                stats.firstMedalDate = medaille.date;
+                stats.firstMedalDate = medaille.date; 
             }
             if (medaille.date > stats.lastMedalDate!) {
                 stats.lastMedalDate = medaille.date;
@@ -94,7 +97,8 @@ export class MedaillesService implements OnModuleInit {
                 }
             });
 
-            // FIX: Only count athletes with M or F gender for the total
+            // FIX:only count athletes with M or F gender for the total (not that i'm against non-binary athletes,
+            //  but there are mixed teams marked as 'X' which skews the stats) :/
             const validGenderedAthletes = Array.from(uniqueAthletes.values()).filter(a => 
                 a.gender === 'M' || a.gender === 'F'
             );
@@ -103,6 +107,7 @@ export class MedaillesService implements OnModuleInit {
             stats.athletes.male = validGenderedAthletes.filter(a => a.gender === 'M').length;
             stats.athletes.female = validGenderedAthletes.filter(a => a.gender === 'F').length;
 
+            //top disciplines
             const disciplineCount = new Map<string, number>();
             countryMedailles.forEach(medaille => {
                 const discipline = medaille.event.discipline;
@@ -114,18 +119,20 @@ export class MedaillesService implements OnModuleInit {
                 .slice(0, 5);
         });
 
+        //sort countries based on criteria 
         const rankings = Array.from(countryStats.values());
         
+        //sorting logic here
         return rankings.sort((a, b) => {
             switch (sortBy) {
                 case 'gold':
-                    return b.medals.gold - a.medals.gold;
+                    return b.medals.gold - a.medals.gold; //descending
                 case 'silver':
-                    return b.medals.silver - a.medals.silver;
+                    return b.medals.silver - a.medals.silver; //same
                 case 'bronze':
                     return b.medals.bronze - a.medals.bronze;
                 default:
-                    if (b.medals.total !== a.medals.total) {
+                    if (b.medals.total !== a.medals.total) { //if total different, we sort by total
                         return b.medals.total - a.medals.total;
                     }
                     if (b.medals.gold !== a.medals.gold) {
@@ -136,12 +143,13 @@ export class MedaillesService implements OnModuleInit {
         });
     }
 
+    //normalize medal type strings to 'gold', 'silver', or 'bronze' so we can count them properly
     private normalizeMedalType(medalType: string): 'gold' | 'silver' | 'bronze' {
         const type = medalType.toLowerCase();
         if (type.includes('gold')) return 'gold';
         if (type.includes('silver')) return 'silver';
         if (type.includes('bronze')) return 'bronze';
-        throw new Error(`Unknown medal type: ${medalType}`);
+        throw new Error(`Unknown medal type: ${medalType}`); //should not happen hopefully believe crois en ton dataset 
     }
 
     //create a new medal
