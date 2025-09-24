@@ -3,6 +3,7 @@
 import { MedaillesService } from './medailles.service';
 import { Medaille, CountryMedalCount} from './Medaille';
 import { Body, Controller, Delete, Get, Param, Post, Query} from '@nestjs/common';
+import {CreateMedalDto} from './dto/create-medal.dto' //dto
 
 @Controller('medals')
 export class MedaillesController {
@@ -30,10 +31,10 @@ export class MedaillesController {
         return this.medaillesService.MedaillefindOne(id);
     }
 
-    //create a new medal
+    //create a new medal //FIX here, we'll use the DTO class instance rather than the medal regular body 
     @Post()
-    async createMedaille(@Body() medaille: Medaille): Promise<Medaille> {
-        return this.medaillesService.createMedaille(medaille);
+    async createMedaille(@Body() body: CreateMedalDto): Promise<Medaille> {
+        return this.medaillesService.createMedaille(body);
     }
     
     //delete a medal by id
@@ -42,4 +43,6 @@ export class MedaillesController {
     async deleteMedaille(@Param('id') id: string): Promise<void> {
         return this.medaillesService.deleteMedaille(id);
     }
+
+    
 }

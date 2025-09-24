@@ -55,6 +55,8 @@ L’objectif est de manipuler des données issues des Jeux Olympiques d’été 
 │   │   └── Events.ts
 │   ├── main.ts
 │   └── Medailles
+|       ├── dto
+|       |   └── create-medal.dto.ts
 │       ├── Medaille.ts
 │       ├── medailles.controller.ts
 │       ├── medailles.module.ts
@@ -274,6 +276,7 @@ npm run test         #execution des tests unitaires
 npm run test:e2e     #exécution des tests end2end
 npm run test:cov     #execution avec la couverture
 ```
+> Note: Nous avons mis en place une vérification du bon format de médaille lors de la création "manuelle" d'une nouvelle médaille (requête @Post()) avec un objet DTO. Il faut pour cela disposer des packages nécessaires class-validator et class-transformer. 
 
 ### Couverture de code
 La couverture de code est générée automatiquement avec Jest (commande ci-dessus) et peut être consultée dans le dossier /coverage, ici non inclus dans le repo. Cette dernière permet de visualiser les parties de nos code couvertes par des tests et celles qui nécessitent encore de nouveaux scénarios.
@@ -341,6 +344,8 @@ link btw our context and the material produced
 - Un utilisateur consulte la liste des événements disponibles et en ajoute certains en favoris.
 - Le comité de suivi accède au classement des médailles par pays, trié par nombre d’or.
 - L’application mobile affiche la liste des athlètes favoris d’un utilisateur, persistée via l’API.
+
+
 
 ## Conclusion 
 
