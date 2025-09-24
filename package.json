@@ -1,8 +1,8 @@
 {
   "name": "tp3",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Projet NestJS pour gérer les données des JO",
-  "author": "Ton Nom",
+  "author": "Chloe Larroze & Alice France",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
