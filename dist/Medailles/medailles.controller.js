@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.MedaillesController = void 0;
 const medailles_service_1 = require("./medailles.service");
 const common_1 = require("@nestjs/common");
+const create_medal_dto_1 = require("./dto/create-medal.dto");
 let MedaillesController = class MedaillesController {
     constructor(medaillesService) {
         this.medaillesService = medaillesService;
@@ -28,8 +29,8 @@ let MedaillesController = class MedaillesController {
     async getMedailleById(id) {
         return this.medaillesService.MedaillefindOne(id);
     }
-    async createMedaille(medaille) {
-        return this.medaillesService.createMedaille(medaille);
+    async createMedaille(body) {
+        return this.medaillesService.createMedaille(body);
     }
     async deleteMedaille(id) {
         return this.medaillesService.deleteMedaille(id);
@@ -60,7 +61,7 @@ __decorate([
     (0, common_1.Post)(),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
+    __metadata("design:paramtypes", [create_medal_dto_1.CreateMedalDto]),
     __metadata("design:returntype", Promise)
 ], MedaillesController.prototype, "createMedaille", null);
 __decorate([

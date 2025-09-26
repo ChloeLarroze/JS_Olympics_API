@@ -113,10 +113,10 @@ let MedaillesService = class MedaillesService {
                     });
                 }
             });
-            const validGenderedAthletes = Array.from(uniqueAthletes.values()).filter(a => a.gender === 'M' || a.gender === 'F');
+            const validGenderedAthletes = Array.from(uniqueAthletes.values()).filter(a => a.gender === 'M' || a.gender === 'W');
             stats.athletes.total = validGenderedAthletes.length;
             stats.athletes.male = validGenderedAthletes.filter(a => a.gender === 'M').length;
-            stats.athletes.female = validGenderedAthletes.filter(a => a.gender === 'F').length;
+            stats.athletes.female = validGenderedAthletes.filter(a => a.gender === 'W').length;
             const disciplineCount = new Map();
             countryMedailles.forEach(medaille => {
                 const discipline = medaille.event.discipline;

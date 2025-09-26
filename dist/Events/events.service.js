@@ -68,11 +68,7 @@ let EventsService = class EventsService {
                 throw new Error(`File does not exist: ${fullPath}`);
             }
             const data = fs.readFileSync(fullPath, 'utf-8');
-            console.log('Raw file data length:', data.length);
-            console.log('First 200 characters:', data.substring(0, 200));
             const parsedData = JSON.parse(data);
-            console.log('Parsed data type:', typeof parsedData);
-            console.log('Is array?', Array.isArray(parsedData));
             let events = [];
             if (Array.isArray(parsedData)) {
                 events = parsedData;
@@ -83,18 +79,12 @@ let EventsService = class EventsService {
             else {
                 events = [parsedData];
             }
-            console.log('Total events to process:', events.length);
             if (events.length > 0) {
-                console.log('First event structure:', JSON.stringify(events[0], null, 2));
             }
             events.forEach((event, index) => {
-                console.log(`Processing event ${index}: event="${event.event}", tag="${event.tag}"`);
                 const id = this.idFromEvent(event);
-                console.log(`Generated ID: "${id}"`);
                 this.eventsById.set(id, event);
             });
-            console.log('Final map size:', this.eventsById.size);
-            console.log('Final map keys:', Array.from(this.eventsById.keys()));
         }
         catch (error) {
             console.error('Error loading events from file:', error);
@@ -106,10 +96,7 @@ let EventsService = class EventsService {
     }
     async EventfindOne(id) {
         try {
-            console.log(`Raw ID received: "${id}"`);
             const normalizedId = this.normalizeId(id);
-            console.log(`Normalized ID: "${normalizedId}"`);
-            console.log(`Available IDs: ${Array.from(this.eventsById.keys()).slice(0, 5).join(', ')}...`);
             const event = this.eventsById.get(normalizedId);
             if (!event)
                 throw new Error(`Event with ID "${id}" not found`);

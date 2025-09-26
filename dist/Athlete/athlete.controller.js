@@ -23,7 +23,15 @@ let AthleteController = class AthleteController {
         return this.athleteService.getAllAthletes();
     }
     getAthlete(code) {
-        return this.athleteService.getAthleteByCode(Number(code));
+        if (!code) {
+            throw new common_1.BadRequestException('Le paramètre code est requis');
+        }
+        const codeNumber = Number(code);
+        if (isNaN(codeNumber)) {
+            throw new common_1.BadRequestException('Le code doit être un nombre valide');
+        }
+        console.log('Code for getAthlete:', codeNumber);
+        return this.athleteService.getAthleteByCode(codeNumber);
     }
     searchAthletes({ term }) {
         return this.athleteService.search(term);
@@ -38,9 +46,9 @@ __decorate([
 ], AthleteController.prototype, "getAthletes", null);
 __decorate([
     (0, common_1.Get)(':code'),
-    __param(0, (0, common_1.Param)('code')),
+    __param(0, (0, common_1.Query)('code')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Number]),
+    __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Object)
 ], AthleteController.prototype, "getAthlete", null);
 __decorate([

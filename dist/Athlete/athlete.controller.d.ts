@@ -4,7 +4,7 @@ export declare class AthleteController {
     private readonly athleteService;
     constructor(athleteService: AthleteService);
     getAthletes(): Athlete[];
-    getAthlete(code: number): Athlete;
+    getAthlete(code: string): Athlete;
     searchAthletes({ term }: {
         term: string;
     }): Athlete[];
