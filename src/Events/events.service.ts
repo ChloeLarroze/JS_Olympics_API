@@ -150,5 +150,16 @@ export class EventsService implements OnModuleInit {
         return Array.from(this.eventsById.keys());
     }
 
-    //others functs ? TODO -> think abt it ... :( 
+    //Récupérer un résumé de toutes les données (i.e. seulement les infos les plus importantes pour l’affichage sur une carte + liste + favori ou non).
+    //postman request example: http://localhost:3000/events/summaries
+    async getEventSummaries(): Promise<{ id: string; event: string; tag: string; discipline: string; isFavorite: boolean }[]> {
+    return Array.from(this.eventsById.entries()).map(([id, event]) => ({
+        id,
+        event: event.event,
+        tag: event.tag,
+        discipline: event.discipline,
+        isFavorite: this.favorites.has(this.idFromEvent(event)), //using normalized ID from event
+    }));
+}
+
 }

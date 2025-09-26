@@ -19,6 +19,14 @@ export class EventsController {
     return this.eventsService.EventfindAll(country);
   }
 
+  //summary thing (see service method getEventSummaries l.151)
+  //promise type content thing https://docs.nestjs.com/controllers#responses
+  //move specific routes BEFORE the parameterized :id route otherwise it won't work
+  @Get('summaries')
+  async getEventSummaries(): Promise<{ id: string; event: string; tag: string; discipline: string; isFavorite: boolean }[]> {
+      return this.eventsService.getEventSummaries();
+  }
+
   //postman request eg : http://localhost:3000/events/Women's Individual-archery
   @Get(':id')
   async EventfindOne(@Param('id') id: string): Promise<Event> {
@@ -46,5 +54,6 @@ export class EventsController {
   @Get('debug/list-ids')
   async listAllIds(): Promise<string[]> {
     return this.eventsService.getAllIds(); //we'll need to add this method to the service
-}
+  }
+
 }
