@@ -6,7 +6,8 @@ const PORT = process.env.PORT ?? 3000; //8080 or 3000
 
 async function bootstrap() {
 
-  const app = await NestFactory.create(AppModule);
+  //CORS enable for front app
+  const app = await NestFactory.create(AppModule, { cors: true }); //former without front : const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe({
       transform: true,
     })); //enable validation pipe (DTO)
