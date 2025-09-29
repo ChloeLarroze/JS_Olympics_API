@@ -478,7 +478,18 @@ L'implémentation se base donc sur :
 - OpenStreetMap : fond de carte libre et collaborative
 - HTML/CSS/JavaScript vanilla : car pas besoin de framework 
 
-Il ne faut pas oublier d'acriver les CORS dans le main. 
+Il ne faut pas oublier d'acriver les CORS dans le main et de whitelist notre nom de domaine: 
+```ts
+// Configure CORS
+  app.enableCors({
+    origin: [
+      'http://localhost:3000',
+      'https://chloelarroze.github.io'  // Ajoute ton domaine GitHub Pages
+    ],
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+  });
+``` 
 
 Il y a malheurseusement dans notre dataset des coordonnées invalides, on ne les regardera pas (sinon erreur). 
 

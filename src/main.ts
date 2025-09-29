@@ -7,7 +7,18 @@ const PORT = process.env.PORT ?? 3000; //8080 or 3000
 async function bootstrap() {
 
   //CORS enable for front app
-  const app = await NestFactory.create(AppModule, { cors: true }); //former without front : const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule); //former without front : const app = await NestFactory.create(AppModule);
+  
+  // Configure CORS
+  app.enableCors({
+    origin: [
+      'http://localhost:3000',
+      'https://chloelarroze.github.io'  // github domain
+    ],
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+  });
+  
   app.useGlobalPipes(new ValidationPipe({
       transform: true,
     })); //enable validation pipe (DTO)
