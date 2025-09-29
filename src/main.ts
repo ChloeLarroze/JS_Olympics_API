@@ -13,7 +13,8 @@ async function bootstrap() {
   app.enableCors({
     origin: [
       'http://localhost:3000',
-      'https://chloelarroze.github.io'  // github domain
+      'https://chloelarroze.github.io',  // github domain
+      'https://chloelarroze.github.io/JS_Olympics_API'  
     ],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
