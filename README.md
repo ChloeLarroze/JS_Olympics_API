@@ -78,8 +78,6 @@ L’objectif est de manipuler des données issues des Jeux Olympiques d’été 
 │   └── Medailles
 │       ├── dto
 │       │   └── create-medal.dto.ts
-│       ├── exceptions
-│       │   └── medaille.exception.ts
 │       ├── Medaille.ts
 │       ├── medailles.controller.ts
 │       ├── medailles.module.ts
@@ -96,11 +94,11 @@ L’objectif est de manipuler des données issues des Jeux Olympiques d’été 
 | **Catégorie**         | **Exigence**                                                                                                                                                           | **Suivi / Explications** |
 |------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|
 | **Données OpenData**   | - Les données doivent être en **format JSON**.<br>- Contenir : <br>  • un champ avec l’**URL d’une image** (ou équivalent pour afficher une image dans une liste)<br>  • un champ **latitude/longitude**.<br>- Les données doivent être **chargées dans l’API Nest au démarrage**. | ✔<br><sub>fichiers dans `./data/dataset_json.json` chargés au bootstrap</sub> |
-| **API – Endpoints**   | - **Résumé des données** : GET `/beers` → retourne les infos principales (affichage carte + liste + favori ou non).<br>- **Détail d’une donnée** : GET `/beers/:beerId`.<br>- **Mettre à jour favori** : PUT `/beers/:beerId` (avec un body).<br>- **Créer une donnée** : POST `/beers` (avec un body).<br>- **Recherche** : endpoint pour chercher parmi les données. |  ✔<br><sub>(ex : endpoints créés → `/athletes`, `/athletes/:id`, etc.)</sub> |
+| **API – Endpoints**   | - **Résumé des données** : GET `/beers` → retourne les infos principales (affichage carte + liste + favori ou non).<br>- **Détail d’une donnée** : GET `/beers/:beerId`.<br>- **Mettre à jour favori** : PUT `/beers/:beerId` (avec un body).<br>- **Créer une donnée** : POST `/beers` (avec un body).<br>- **Recherche** : endpoint pour chercher parmi les données. |  ✔<br><sub>résumé des données avec le endpoint → `/events/summary` Tous les autres endpoints/fonctions sont trouvables dans`/athletes`, `/athletes/:id`, etc.</sub> |
 | **Déploiement**       | - L’API doit être **déployée sur CleverCloud**.                                                                                                                        | ✔<br><sub>URLs CleverCloud :  js_olympics_api.cleverapps.io/athletes, js_olympics_api.cleverapps.io/events et js_olympics_api.cleverapps.io/medals. 
 </sub> |
-| **Tests**             | - Écrire et exécuter des **tests automatisés** pour valider les fonctionnalités.                                                                                        | ⬜<br><sub>(ex : tests unitaires Jest → `beer.service.spec.ts`)</sub> |
-| **Résultats**         | - Garder la possibilité d’**exposer ou afficher les résultats** (par ex. une interface front ou un export JSON accessible publiquement).                                 | ⬜<br><sub>(ex : lien vers le front ou endpoint `/results`)</sub> |
+| **Tests**             | - Écrire et exécuter des **tests automatisés** pour valider les fonctionnalités.                                                                                        | ✔<br><sub>ex : tests e2e Jest → `./test/*-spec.ts` et tests unitaires avec Postman [Workspace Postman JO Paris 2024](https://joparis2024.postman.co/workspace/JO_Paris2024-Workspace~b3d123fe-cfd9-46a1-85b7-b215b58cba47/collection/46131293-f678c346-5ec0-457d-8687-e63590c39d2f?action=share&creator=46131293)</sub> |
+| **Résultats/Bonus**         | - Garder la possibilité d’**exposer ou afficher les résultats** (par ex. une interface front ou un export JSON accessible publiquement).                                 | ✔<br><sub>Voir le déploiement sur Clever Cloud ou bien le front pour les events uniquement : https://chloelarroze.github.io/JS_Olympics_API/ </sub> |
 
 
 
@@ -280,6 +278,7 @@ Toutes les données échangées entre le client et le serveur transitent au form
 - DELETE /events/:id : suppression d’un événement.
 - POST /events/favorite/:id : met un événement en favori.
 - GET /events/debug/list-ids : endpoint de debug listant les identifiants disponibles.
+- GET /events/summary : affiche certaines informations uniquement 
 
 ##### Médailles (/medals)
 
@@ -463,7 +462,7 @@ Son objectif principal est de structurer les données et de définir clairement 
 Il y a ainsi quelques points auxquels il faudra prêter attention, tels que la vérification que les décorateurs (@Type, @IsDateString, @IsNotEmpty, etc) et les classes (MedalDto, AthleteDto, EventDto, CountryDto) sont bien importés en haut du fichier.
 
 ### 6.2. Front
-Pour ajouter un interêt à la nécessité de devoir disposer de coordonnées, nous avons créé une interface en front, dont le code est largement <s>piqué</s> inspiré de [Leaflet-examples](https://github.com/tomickigrzegorz/leaflet-examples), nous les avons ensuite modifiés pour qu'ils correspondent à nos données. 
+Pour ajouter un interêt à la nécessité de devoir disposer de coordonnées, nous avons créé une interface en front, dont le code est largement <s>piqué</s> inspiré de [Leaflet-examples](https://github.com/tomickigrzegorz/leaflet-examples), nous les avons ensuite modifiés pour qu'ils correspondent à nos données. On le trouvera une fois l'application démarrée à l'adresse : https://chloelarroze.github.io/JS_Olympics_API/
 
 <div align="center">
     <img src="./.pics/front.png" alt="frontyeahaw" width="400px"/>
